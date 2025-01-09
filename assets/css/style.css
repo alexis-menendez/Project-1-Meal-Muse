@@ -1,5 +1,3 @@
-@import "https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css";
-
 :root {
     --bulma-primary-h: 281deg;
     --bulma-primary-s: 52%;
@@ -111,7 +109,7 @@
   }
   
   .breadcrumb {
-    --bulma-breadcrumb-item-color: hsl(330, 38%, 46%);
+    --bulma-breadcrumb-item-color: hsl(340, 42%, 52%);
     --bulma-breadcrumb-item-hover-color: hsl(8deg,79%,calc(69% + -5%)) ;
     --bulma-breadcrumb-item-active-color: hsl(356deg,75%,calc(67% + -10%)) ;
     --bulma-breadcrumb-item-padding-vertical: 0.001;
@@ -120,7 +118,7 @@
   }
   
   .card {
-    --bulma-card-color: hsla(19, 86%, 70%, 1);
+    --bulma-card-color: hsla(4, 86%, 70%, 1);
     --bulma-card-background-color: hsl(33, 97%, 72%);
     --bulma-card-shadow: 0 0.5em 1em -0.125em hsla(316deg, 41%, 38%, 0.1), 0 0px 0 1px hsla(316deg, 41%, 38%, 0.02);
     --bulma-card-radius: 0.76rem;
@@ -560,5 +558,31 @@
     --bulma-section-padding-medium: 9.001rem 4.5rem;
     --bulma-section-padding-large: 18.001rem 6rem;
   }
+
+  body {
+    background: linear-gradient(
+        120deg, 
+        #ffdeb7,  /* Light Buttermilk */
+        #ffcd8f,  /* Soft Honey Gold */
+        #fed7a7,  /* Pastel Yellow-Orange */
+       /* #f0b45f,  /* Warm Yellow-Orange Hue */    /* I took Warm Yellow-Orange Hue out because it was too dark for the gradient */
+        #f9af72,  /* Apricot Glow */
+       /* #f59b71,  /* Warm Peach */                /* I took Warm Peach out because it was too dark for the gradient */
+        #ffb085,  /* Peachy Orange */
+        #ed7c74,   /* Warm Blush */
+       /* #a33322,  /* Warm Coral Red-Orange */     /* I took Warm Coral Red-Orange out because it was too dark for the gradient */
+       /* #91242b,  /* Vibrant Crimson Red */       /* I took Vibrant Crimson Red out because it was too dark for the gradient */
+        #e96b74,  /* Coral Pink */
+        #d35f74,  /* Cherry Blossom */
+        #bb5374,  /* Faded Cranberry */
+        #ba5374,  /* Rosy Red */
+        #a34874,  /* Rosewood Mauve */
+        #75485f,  /* Muted Purple-Pink */
+       /* #503c5b,  /* Muted Dark Purple */         /* I took Muted Dark Purple out because it was too dark for the gradient */
+        #603956,  /* Rich Plum */
+       /* #702e75,  /* Dusky Violet */              /* I took Dusky Violet out because it was too dark for the gradient */
+        #5c2576  /* Deep Plum */
+        );
+}
   
   
