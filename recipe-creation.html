@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Creation Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"> <!-- Bulma CSS Framework -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .custom-navbar {
+            background-color: #bb5374; /* Faded Cranberry */
+            border-bottom: 2px solid black; 
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar custom-navbar">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="index.html">Meal Muse</a>
+            <a class="navbar-item" href="calendar.html">Calendar</a>
+            <a class="navbar-item" href="recipe-library.html">Recipe Library</a>
+            <a class="navbar-item is-active" href="recipe-creation.html">Add Recipe</a>
+        </div>
+    </nav>
+
+    <!-- Content Section -->
+    <section class="section">
+        <div class="container">
+            <h1 class="title has-text-centered">Add Your Recipe</h1>
+            <div class="box">
+                <form id="recipe-form">
+                    <!-- Recipe Name -->
+                    <div class="field">
+                        <label class="label">Recipe Name</label>
+                        <div class="control">
+                            <input class="input" type="text" id="recipe-name" placeholder="Enter recipe name" required>
+                        </div>
+                    </div>
+
+                    <!-- Ingredients -->
+                    <div class="field">
+                        <label class="label">Ingredients</label>
+                        <div class="control">
+                            <textarea class="textarea" id="ingredients" placeholder="List the ingredients separated by commas" required></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Preparation Steps -->
+                    <div class="field">
+                        <label class="label">Preparation Steps</label>
+                        <div class="control">
+                            <textarea class="textarea" id="steps" placeholder="Enter step-by-step instructions" required></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Save Button -->
+                    <div class="control has-text-centered">
+                        <button type="submit" class="button is-warning">Save Recipe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="assets/js/recipe-creation.js"></script>
+</body>
+
+</html>
