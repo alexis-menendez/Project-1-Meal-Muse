@@ -26,7 +26,7 @@
     --bulma-bold-l: 21%;
     --bulma-soft-invert-l: 21%;
     --bulma-bold-invert-l: 91%;
-    --bulma-hover-background-l-delta: -6%;
+    --bulma-hover-background-l-delta: -30%;
     --bulma-active-background-l-delta: -11%;
     --bulma-hover-border-l-delta: -11%;
     --bulma-active-border-l-delta: -21%;
@@ -236,8 +236,8 @@
     --bulma-navbar-s: 15%;
     --bulma-navbar-l: 99%;
     --bulma-navbar-background-color: hsl(8, 79%, 64%);
-    --bulma-navbar-box-shadow-size: 0 0.126em 0 0;
-    --bulma-navbar-box-shadow-color: hsl(320, 40%, 40%) ;
+    --bulma-navbar-box-shadow-size: 0 2px 0 0;
+    --bulma-navbar-box-shadow-color: hsl(320, 94%, 6%) ;
     --bulma-navbar-padding-vertical: 1.001rem;
     --bulma-navbar-padding-horizontal: 2.001rem;
     --bulma-navbar-z: 31;
@@ -247,7 +247,7 @@
     --bulma-navbar-item-background-l-delta: 1%;
     --bulma-navbar-item-hover-background-l-delta: -6%;
     --bulma-navbar-item-active-background-l-delta: -11%;
-    --bulma-navbar-item-color-l: 30%;
+    --bulma-navbar-item-color-l: -50%;
     --bulma-navbar-item-selected-h: 12deg;
     --bulma-navbar-item-selected-s: 99%;
     --bulma-navbar-item-selected-l: 64%;
@@ -468,7 +468,7 @@
   }
   
   .title {
-    --bulma-title-color: hsl(8, 79%, 64%) ;
+    --bulma-title-color: #5c2576; /* Deep Plum */
     --bulma-title-family: false (false);
     --bulma-title-size: 2.001rem;
     --bulma-title-weight: 801;
@@ -559,6 +559,9 @@
     --bulma-section-padding-large: 18.001rem 6rem;
   }
 
+  /*Custom CSS (Override Bulma)*/     /* This is where you can add overrides for specific elements on your page without having to change the settings across the entire website (I think) */
+
+  /*Background Gradient*/    /* Some of the colors are commented out because they didb't work with the gradient, but I left them here for easy access to refence when changing colors of other elements */
   body {
     background: linear-gradient(
         120deg, 
@@ -583,6 +586,33 @@
        /* #702e75,  /* Dusky Violet */              /* I took Dusky Violet out because it was too dark for the gradient */
         #5c2576  /* Deep Plum */
         );
+}
+
+ /*navbar*/
+.navbar-item {
+  color: #16021f;  /* Very Dark Plum */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-item:hover {
+  background-color: #f0b45f;  /* Warm Yellow-Orange Hue */
+  color: black;
+}
+
+ /*text input boxes*/
+.input, .textarea {
+  background-color: #ffe9dd; /* Light Peach background */
+  color: #16021f; /* Dark Plum text */
+  border-color: #f8b693; /* Faded Cranberry border */
+}
+
+.input::placeholder, .textarea::placeholder {
+  color: #a48b97; /* Muted placeholder text color */
+}
+
+.input:focus, .textarea:focus {
+  border-color: #f0b45f; /* Highlight the border when focused */
+  box-shadow: 0 0 5px rgba(240, 180, 95, 0.5); /* Add a glowing effect */
 }
   
   

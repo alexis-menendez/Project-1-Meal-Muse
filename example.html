@@ -3,11 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gradient Background Preview</title>
+    <title>Stylesheet Preview</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .custom-navbar { /* This is part of the navbar, but there is also bulma css in the stylesheet that it needs */
+            background-color: #bb5374; /* Faded Cranberry */
+            border-bottom: 2px solid black;
+        }
+        .navbar-item {
+            color: #16021f; /* Very Dark Plum */
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .navbar-item:hover {
+            background-color: #f0b45f; /* Warm Yellow-Orange Hue */
+            color: black;
+        }
+    </style>
 </head>
 <body>
+    <!-- Navigation Bar --> 
+    <nav class="navbar custom-navbar">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="index.html">Meal Muse</a>
+            <a class="navbar-item" href="calendar.html">Calendar</a>
+            <a class="navbar-item" href="recipe-library.html">Recipe Library</a>
+            <a class="navbar-item is-active" href="recipe-creation.html">Add Recipe</a>
+        </div>
+    </nav>
+
+    <!-- Content Section -->
     <section class="section">
         <div class="container">
             <div class="columns">
@@ -22,7 +47,7 @@
                 <div class="column is-one-third">
                     <div class="box has-text-centered">
                         <h2 class="title">Box 2</h2>
-                        <p>This html file is an example and will not be part of the final product. I made it so I could show what the theme looks like and how you can link your own work to the stylesheet.</p>
+                        <p>This HTML file is an example and will not be part of the final product. I made it so I could show what the theme looks like and how you can link your own work to the stylesheet.</p>
                     </div>
                 </div>
                 <!-- Box 3 -->
