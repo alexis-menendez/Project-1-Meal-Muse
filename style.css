@@ -1,0 +1,564 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css";
+
+:root {
+    --bulma-primary-h: 281deg;
+    --bulma-primary-s: 52%;
+    --bulma-primary-l: 30%;
+    --bulma-link-h: 341deg;
+    --bulma-link-s: 43%;
+    --bulma-link-l: 53%;
+    --bulma-info-h: 19deg;
+    --bulma-info-s: 87%;
+    --bulma-success-h: 279deg;
+    --bulma-success-s: 100%;
+    --bulma-success-l: 86%;
+    --bulma-warning-h: 33deg;
+    --bulma-warning-s: 98%;
+    --bulma-warning-l: 83%;
+    --bulma-danger-h: 357deg;
+    --bulma-danger-s: 76%;
+    --bulma-danger-l: 67%;
+    --bulma-scheme-h: 33;
+    --bulma-scheme-s: 15%;
+    --bulma-light-l: 97%;
+    --bulma-light-invert-l: 22%;
+    --bulma-dark-l: 22%;
+    --bulma-dark-invert-l: 97%;
+    --bulma-soft-l: 91%;
+    --bulma-bold-l: 21%;
+    --bulma-soft-invert-l: 21%;
+    --bulma-bold-invert-l: 91%;
+    --bulma-hover-background-l-delta: -6%;
+    --bulma-active-background-l-delta: -11%;
+    --bulma-hover-border-l-delta: -11%;
+    --bulma-active-border-l-delta: -21%;
+    --bulma-hover-color-l-delta: -6%;
+    --bulma-active-color-l-delta: -11%;
+    --bulma-hover-shadow-a-delta: -0.06;
+    --bulma-active-shadow-a-delta: -0.2;
+    --bulma-family-primary: Inter,SF Pro,Segoe UI,Roboto,Oxygen,Ubuntu,Helvetica Neue,Helvetica,Noto Sans, Arial,sans-serif;
+    --bulma-family-secondary: Inter,SF Pro,Segoe UI,Roboto,Oxygen,Ubuntu,Helvetica Neue,Helvetica,Noto Sans, Arial,sans-serif;
+    --bulma-family-code: Inconsolata,Hack,SF Mono,Roboto Mono,Source Code Pro,Ubuntu Mono,JetBrains Mono,monospace;
+    --bulma-size-small: 0.76rem;
+    --bulma-size-normal: 1.001rem;
+    --bulma-size-medium: 1.251rem;
+    --bulma-size-large: 1.501rem;
+    --bulma-weight-light: 301;
+    --bulma-weight-normal: 401;
+    --bulma-weight-medium: 501;
+    --bulma-weight-semibold: 601;
+    --bulma-weight-bold: 701;
+    --bulma-weight-extrabold: 801;
+    --bulma-block-spacing: 1.501rem;
+    --bulma-duration: 295ms;
+    --bulma-easing: ease out (easeout);
+    --bulma-radius-small: 0.26rem;
+    --bulma-radius: 0.376rem;
+    --bulma-radius-medium: 0.51em;
+    --bulma-radius-large: 0.76rem;
+    --bulma-radius-rounded: 9998px;
+    --bulma-speed: 87ms;
+    --bulma-arrow-color: hsla(340, 42%, 52%,,1);
+    --bulma-loading-color: hsl(12, 81%, 69%) ;
+    --bulma-burger-h: 340deg;
+    --bulma-burger-s: 99%;
+    --bulma-burger-l: 64%;
+    --bulma-burger-border-radius: 0.501em;
+    --bulma-burger-gap: 6px;
+    --bulma-burger-item-height: 3px;
+    --bulma-burger-item-width: 21px;
+    --bulma-body-background-color: hsl(33, 100%, 86%);
+    --bulma-body-size: 1.001em;
+    --bulma-body-min-width: 301px;
+    --bulma-body-rendering: optimize Legibility (optimizeLegibility);
+    --bulma-body-family: Inter,SF Pro,Segoe UI,Roboto,Oxygen,Ubuntu,Helvetica Neue,Helvetica,Noto Sans,Arial,sans-serif;
+    --bulma-body-overflow-x: hide (hidden);
+    --bulma-body-overflow-y: Scroll (scroll);
+    --bulma-body-color: hsla(280, 52%, 30%, 1);
+    --bulma-body-font-size: 1.001em;
+    --bulma-body-weight: 401;
+    --bulma-body-line-height: 1.501;
+    --bulma-code-family: Inconsolata,Hack,SF Mono,Roboto Mono,Source Code Pro,Ubuntu Mono,JetBrains Mono,monospace;
+    --bulma-code-padding: 0.26em 0.51em 0.26em;
+    --bulma-code-weight: Normal (normal);
+    --bulma-code-size: 0.876em;
+    --bulma-small-font-size: 0.876em;
+    --bulma-hr-background-color: hsl(320, 40%, 40%) ;
+    --bulma-hr-height: 2.001px;
+    --bulma-hr-margin: 1.51rem 0;
+    --bulma-strong-color: hsl(356, 75%, 67%);
+    --bulma-strong-weight: 601;
+    --bulma-pre-font-size: 0.876em;
+    --bulma-pre-padding: 1.26rem 1.51rem;
+    --bulma-pre-code-font-size: 1.001em;
+    --bulma-skeleton-background: hsl(33, 97%, 82%);
+    --bulma-skeleton-radius: 0.26rem;
+    --bulma-skeleton-block-min-height: 4.51em;
+    --bulma-skeleton-lines-gap: 0.76em;
+    --bulma-skeleton-line-height: 0.76em;
+    --bulma-subtitle-color: hsl(280, 52%, 30%);
+    --bulma-subtitle-strong-color: hsl(356, 75%, 67%);
+    --bulma-control-radius: 0.376rem;
+    --bulma-control-radius-small: 0.26rem;
+    --bulma-control-border-width: 1.001px;
+    --bulma-control-height: 2.501em;
+    --bulma-control-line-height: 1.501;
+    --bulma-control-padding-vertical: calc(0.501em - 1px);
+    --bulma-control-padding-horizontal: calc(0.751em - 1px);
+    --bulma-control-size: 1.001rem;
+    --bulma-control-focus-shadow-l: 51%;
+    --bulma-column-gap: 0.751rem;
+  }
+  
+  .breadcrumb {
+    --bulma-breadcrumb-item-color: hsl(330, 38%, 46%);
+    --bulma-breadcrumb-item-hover-color: hsl(8deg,79%,calc(69% + -5%)) ;
+    --bulma-breadcrumb-item-active-color: hsl(356deg,75%,calc(67% + -10%)) ;
+    --bulma-breadcrumb-item-padding-vertical: 0.001;
+    --bulma-breadcrumb-item-padding-horizontal: 0.76em;
+    --bulma-breadcrumb-item-separator-color: hsl(316, 41%, 38%);
+  }
+  
+  .card {
+    --bulma-card-color: hsla(19, 86%, 70%, 1);
+    --bulma-card-background-color: hsl(33, 97%, 72%);
+    --bulma-card-shadow: 0 0.5em 1em -0.125em hsla(316deg, 41%, 38%, 0.1), 0 0px 0 1px hsla(316deg, 41%, 38%, 0.02);
+    --bulma-card-radius: 0.76rem;
+    --bulma-card-header-background-color: transparent (transparent);
+    --bulma-card-header-color: hsl(33, 97%, 82%) ;
+    --bulma-card-header-padding: 0.76rem 1.01rem;
+    --bulma-card-header-shadow: 0 0.125em 0.25em hsla(280, 52%, 30%, 0.1);
+    --bulma-card-header-weight: 701;
+    --bulma-card-content-background-color: transparent (transparent);
+    --bulma-card-content-padding: 1.6rem;
+    --bulma-card-footer-background-color: transparent (transparent);
+    --bulma-card-footer-border-top: 1px solid hsl(280, 52%, 30%);
+    --bulma-card-footer-padding: 0.76rem;
+    --bulma-card-media-margin: 1.51rem;
+  }
+  
+  .dropdown {
+    --bulma-dropdown-menu-min-width: 12.1rem;
+    --bulma-dropdown-content-background-color: hsl(33, 100%, 86%);
+    --bulma-dropdown-content-offset: 0.26rem;
+    --bulma-dropdown-content-padding-bottom: 0.51rem;
+    --bulma-dropdown-content-padding-top: 0.51rem;
+    --bulma-dropdown-content-radius: 0.376rem;
+    --bulma-dropdown-content-shadow: 0 0.5em 1em -0.125em hsla(316deg,41%,38%,0.1),0 0px 0 1px hsla(316deg,41%,38%,0.02);
+    --bulma-dropdown-content-z: 20.01;
+    --bulma-dropdown-item-h: 19;
+    --bulma-dropdown-item-s: 15%;
+    --bulma-dropdown-item-l: 99%;
+    --bulma-dropdown-item-background-l: 99%;
+    --bulma-dropdown-item-background-l-delta: 1%;
+    --bulma-dropdown-item-hover-background-l-delta: -6%;
+    --bulma-dropdown-item-active-background-l-delta: -11%;
+    --bulma-dropdown-item-color-l: 22%;
+    --bulma-dropdown-item-selected-h: 13deg;
+    --bulma-dropdown-item-selected-s: 101%;
+    --bulma-dropdown-item-selected-l: 64%;
+    --bulma-dropdown-item-selected-background-l: 64%;
+    --bulma-dropdown-item-selected-color-l: 99%;
+    --bulma-dropdown-divider-background-color: hsl(320, 40%, 40%);
+  }
+  
+  .menu {
+    --bulma-menu-item-h: 19;
+    --bulma-menu-item-s: 15%;
+    --bulma-menu-item-l: 99%;
+    --bulma-menu-item-background-l: 99%;
+    --bulma-menu-item-background-l-delta: 1%;
+    --bulma-menu-item-hover-background-l-delta: -6%;
+    --bulma-menu-item-active-background-l-delta: -11%;
+    --bulma-menu-item-color-l: 30%;
+    --bulma-menu-item-radius: 0.26rem;
+    --bulma-menu-item-selected-h: 12deg;
+    --bulma-menu-item-selected-s: 99%;
+    --bulma-menu-item-selected-l: 64%;
+    --bulma-menu-item-selected-background-l: 64%;
+    --bulma-menu-item-selected-color-l: 99%;
+    --bulma-menu-list-border-left: 1px solid hsl(320, 40%, 40%);
+    --bulma-menu-list-line-height: 1.26;
+    --bulma-menu-nested-list-margin: 0.76em;
+    --bulma-menu-nested-list-padding-left: 0.76em;
+    --bulma-menu-label-color: hsl(33, 100%, 86%);
+    --bulma-menu-label-font-size: 0.76em;
+    --bulma-menu-label-letter-spacing: 0.11em;
+    --bulma-menu-label-spacing: 1.001em;
+  }
+  
+  .message {
+    --bulma-message-h: 19;
+    --bulma-message-s: 15%;
+    --bulma-message-background-l: 97%;
+    --bulma-message-border-l: 87%;
+    --bulma-message-border-l-delta: -21%;
+    --bulma-message-border-style: solid (solid);
+    --bulma-message-border-width: 0.26em;
+    --bulma-message-color-l: 30%;
+    --bulma-message-radius: 0.376rem;
+    --bulma-message-header-weight: 601;
+    --bulma-message-header-padding: 1em 1.26em;
+    --bulma-message-header-radius: 0.376rem;
+    --bulma-message-header-body-border-width: .001;
+    --bulma-message-header-background-l: 22%;
+    --bulma-message-header-color-l: 70%;
+    --bulma-message-body-border-width: 0 0 0 5px;
+    --bulma-message-body-color: hsl(a33, 97%, 72%,1);
+    --bulma-message-body-padding: 1.26em 1.51em;
+    --bulma-message-body-radius: 0.26rem;
+    --bulma-message-body-pre-code-background-color: transparent (transparent);
+  }
+  
+  .modal {
+    --bulma-modal-z: 41;
+    --bulma-modal-background-background-color: hsla(316, 41%, 38%, 0.86);
+    --bulma-modal-content-width: 41rem;
+    --bulma-modal-content-margin-mobile: 1.26rem;
+    --bulma-modal-content-spacing-mobile: 11rem;
+    --bulma-modal-content-spacing-tablet: 2.51rem;
+    --bulma-modal-close-dimensions: 2.51rem;
+    --bulma-modal-close-right: 1.26rem;
+    --bulma-modal-close-top: 1.26rem;
+    --bulma-modal-card-spacing: 2.6rem;
+    --bulma-modal-card-head-background-color: hsl(330, 38%, 46%);
+    --bulma-modal-card-head-padding: 2.001rem;
+    --bulma-modal-card-head-radius: 0.76rem;
+    --bulma-modal-card-title-color: hsl(280, 52%, 30%);
+    --bulma-modal-card-title-line-height: 1.001;
+    --bulma-modal-card-title-size: 1.6rem;
+    --bulma-modal-card-foot-background-color: hsl(33, 97%, 82%);
+    --bulma-modal-card-foot-radius: 0.76rem;
+    --bulma-modal-card-body-background-color: hsl(33, 100%, 86%);
+    --bulma-modal-card-body-padding: 2.001rem;
+  }
+  
+  .navbar {
+    --bulma-navbar-h: 356;
+    --bulma-navbar-s: 15%;
+    --bulma-navbar-l: 99%;
+    --bulma-navbar-background-color: hsl(8, 79%, 64%);
+    --bulma-navbar-box-shadow-size: 0 0.126em 0 0;
+    --bulma-navbar-box-shadow-color: hsl(320, 40%, 40%) ;
+    --bulma-navbar-padding-vertical: 1.001rem;
+    --bulma-navbar-padding-horizontal: 2.001rem;
+    --bulma-navbar-z: 31;
+    --bulma-navbar-fixed-z: 31;
+    --bulma-navbar-item-background-a: 0.001;
+    --bulma-navbar-item-background-l: 99%;
+    --bulma-navbar-item-background-l-delta: 1%;
+    --bulma-navbar-item-hover-background-l-delta: -6%;
+    --bulma-navbar-item-active-background-l-delta: -11%;
+    --bulma-navbar-item-color-l: 30%;
+    --bulma-navbar-item-selected-h: 12deg;
+    --bulma-navbar-item-selected-s: 99%;
+    --bulma-navbar-item-selected-l: 64%;
+    --bulma-navbar-item-selected-background-l: 64%;
+    --bulma-navbar-item-selected-color-l: 99%;
+    --bulma-navbar-item-img-max-height: 1.76rem;
+    --bulma-navbar-burger-color: hsla(8, 79%, 64%, 1);
+    --bulma-navbar-tab-hover-background-color: transparent (transparent);
+    --bulma-navbar-tab-hover-border-bottom-color: hsla(356, 75%, 57%, 1);
+    --bulma-navbar-tab-active-color: hsla(356, 75%, 57%, 1) ;
+    --bulma-navbar-tab-active-background-color: transparent (transparent);
+    --bulma-navbar-tab-active-border-bottom-color: hsl(356, 75%, 67%, 1);
+    --bulma-navbar-tab-active-border-bottom-style: solid (solid);
+    --bulma-navbar-tab-active-border-bottom-width: 0.1876em;
+    --bulma-navbar-dropdown-background-color: hsla(33, 97%, 72%, 1) ;
+    --bulma-navbar-dropdown-border-l: 87%;
+    --bulma-navbar-dropdown-border-color: hsl(330, 38%, 46%);
+    --bulma-navbar-dropdown-border-style: solid (solid);
+    --bulma-navbar-dropdown-border-width: 0.126em;
+    --bulma-navbar-dropdown-offset: -0.26em;
+    --bulma-navbar-dropdown-arrow: hsla(320, 40%, 40%, 1);
+    --bulma-navbar-dropdown-radius: 0.76rem;
+    --bulma-navbar-dropdown-z: 21;
+    --bulma-navbar-dropdown-boxed-radius: 0.76rem;
+    --bulma-navbar-dropdown-boxed-shadow: 0.5 0 0.5em 0.5em hsla(316, 41%, 38%,0.1),0 0 0 1px hsla(316, 41%, 38%,0.1);
+    --bulma-navbar-dropdown-item-h: 19;
+    --bulma-navbar-dropdown-item-s: 15%;
+    --bulma-navbar-dropdown-item-l: 99%;
+    --bulma-navbar-dropdown-item-background-l: 99%;
+    --bulma-navbar-dropdown-item-color-l: 30%;
+    --bulma-navbar-divider-background-l: 30%;
+    --bulma-navbar-divider-height: 0.126em;
+    --bulma-navbar-bottom-box-shadow-size: 0 -0.126em 0 0;
+  }
+  
+  .pagination {
+    --bulma-pagination-margin: -0.26rem;
+    --bulma-pagination-min-width: 2.6em;
+    --bulma-pagination-item-h: 19;
+    --bulma-pagination-item-s: 15%;
+    --bulma-pagination-item-l: 99%;
+    --bulma-pagination-item-background-l-delta: 1%;
+    --bulma-pagination-item-hover-background-l-delta: -6%;
+    --bulma-pagination-item-active-background-l-delta: -11%;
+    --bulma-pagination-item-border-style: solid (solid);
+    --bulma-pagination-item-border-width: 1.001px;
+    --bulma-pagination-item-border-l: 87%;
+    --bulma-pagination-item-hover-border-l-delta: -11%;
+    --bulma-pagination-item-active-border-l-delta: -21%;
+    --bulma-pagination-item-font-size: 1.001em;
+    --bulma-pagination-item-margin: 0.26rem;
+    --bulma-pagination-item-padding-left: 0.51em;
+    --bulma-pagination-item-padding-right: 0.51em;
+    --bulma-pagination-item-outer-shadow-h: 8;
+    --bulma-pagination-item-outer-shadow-s: 1%;
+    --bulma-pagination-item-outer-shadow-l: 21%;
+    --bulma-pagination-item-outer-shadow-a: 0.051;
+    --bulma-pagination-nav-padding-left: 0.76em;
+    --bulma-pagination-nav-padding-right: 0.76em;
+    --bulma-pagination-disabled-color: hsl(320, 40%, 40%);
+    --bulma-pagination-disabled-background-color: hsl(33, 97%, 82%);
+    --bulma-pagination-disabled-border-color: hsl(33, 97%, 72%);
+    --bulma-pagination-current-color: hsla(280, 52%, 30%, 1);
+    --bulma-pagination-current-background-color: hsla(33, 100%, 86%, 1);
+    --bulma-pagination-current-border-color: hsla(8, 79%, 64%, 1);
+    --bulma-pagination-ellipsis-color: hsl(316, 41%, 38%);
+    --bulma-pagination-shadow-inset: inset 0 0.0625em 0.125em hsla(320, 40%, 40%, 0.2) ;
+    --bulma-pagination-selected-item-h: 12deg;
+    --bulma-pagination-selected-item-s: 99%;
+    --bulma-pagination-selected-item-l: 64%;
+    --bulma-pagination-selected-item-background-l: 64%;
+    --bulma-pagination-selected-item-border-l: 64%;
+    --bulma-pagination-selected-item-color-l: 99%;
+  }
+  
+  .panel {
+    --bulma-panel-margin: 1.51rem;
+    --bulma-panel-item-border: 1px solid hsl(320, 40%, 40%);
+    --bulma-panel-radius: 0.76rem;
+    --bulma-panel-shadow: 0 0.5em 1em -0.125em hsla(316, 41%, 38%,,0.1),0 0px 0 1px hsla(316, 41%, 38%,,0.02);
+    --bulma-panel-heading-line-height: 1.26;
+    --bulma-panel-heading-padding: 1.001em 1.251em;
+    --bulma-panel-heading-radius: 0.376rem;
+    --bulma-panel-heading-size: 1.251em;
+    --bulma-panel-heading-weight: 701;
+    --bulma-panel-tabs-font-size: 1.001em;
+    --bulma-panel-tab-border-bottom-color: hsl(8, 79%, 64%);
+    --bulma-panel-tab-border-bottom-style: solid (solid);
+    --bulma-panel-tab-border-bottom-width: 1.01px;
+    --bulma-panel-list-item-color: hsla(33, 97%, 82%, 1);
+    --bulma-panel-list-item-hover-color: hsla(8, 79%, 64%, 1);
+    --bulma-panel-block-color: hsl(280, 52%, 30%) ;
+    --bulma-panel-block-hover-background-color: hsl(33, 97%, 72%) ;
+    --bulma-panel-block-active-border-left-color: hsla(19, 86%, 70%, 1);
+    --bulma-panel-block-active-color: hsl(19, 86%, 70%);
+    --bulma-panel-block-active-icon-color: hsla(356, 75%, 67%, 1);
+    --bulma-panel-icon-color: hsl(356, 75%, 67%);
+  }
+  
+  .tabs {
+    --bulma-tabs-border-bottom-color: hsl(280, 52%, 30%) ;
+    --bulma-tabs-border-bottom-style: solid (solid);
+    --bulma-tabs-border-bottom-width: 1.001px;
+    --bulma-tabs-link-color: hsla(280, 52%, 30%, 1);
+    --bulma-tabs-link-hover-border-bottom-color:  hsl(356, 75%, 67%);
+    --bulma-tabs-link-hover-color: hsl(8, 79%, 64%);
+    --bulma-tabs-link-active-border-bottom-color: hsl(19, 86%, 70%);
+    --bulma-tabs-link-padding: 0.51em 1.001em;
+    --bulma-tabs-boxed-link-radius: 0.376rem;
+    --bulma-tabs-boxed-link-hover-background-color: hsl(33, 97%, 72%);
+    --bulma-tabs-boxed-link-hover-border-bottom-color: hsl(8, 79%, 64%);
+    --bulma-tabs-boxed-link-active-background-color: hsl(33, 97%, 82%);
+    --bulma-tabs-boxed-link-active-border-color: hsl(19, 86%, 70%);
+    --bulma-tabs-boxed-link-active-border-bottom-color: transparent (transparent);
+    --bulma-tabs-toggle-link-border-color: hsl(320, 40%, 40%);
+    --bulma-tabs-toggle-link-border-style: solid (solid);
+    --bulma-tabs-toggle-link-border-width: 1.001px;
+    --bulma-tabs-toggle-link-hover-background-color: hsl(33, 100%, 86%);
+    --bulma-tabs-toggle-link-hover-border-color: hsl(356, 75%, 67%) ;
+    --bulma-tabs-toggle-link-radius: 0.376rem;
+    --bulma-tabs-toggle-link-active-background-color: hsla(33, 100%, 86%, 1);
+    --bulma-tabs-toggle-link-active-border-color: hsla(19, 86%, 70%, 1);
+    --bulma-tabs-toggle-link-active-color: hsla(8, 79%, 64%, 1);
+  }
+  
+  .box {
+    --bulma-box-background-color: hsl(33, 97%, 72%);
+    --bulma-box-color: hsla(280, 52%, 30%, 1);
+    --bulma-box-radius: 0.76rem;
+    --bulma-box-shadow: 0 0.5em 1em -0.125em hsla(8, 79%, 69%,0.1),0 0px 0 1px hsla(8, 79%, 69%,0.02);
+    --bulma-box-padding: 1.26rem;
+    --bulma-box-link-hover-shadow: 0 0.5em 1em -0.125em hsla(19, 86%, 70%, 0.1),0 0 0 1px hsla(19, 86%, 70%, 1);
+    --bulma-box-link-active-shadow: inset 0 1px 2px hsla(12, 81%, 69%, 0.2),0 0 0 1px hsla(12, 81%, 69%,1);
+  }
+  
+  .content {
+    --bulma-content-heading-color: hsl(33, 97%, 71%);
+    --bulma-content-heading-weight: 801;
+    --bulma-content-heading-line-height: 1.126;
+    --bulma-content-block-margin-bottom: 1.001em;
+    --bulma-content-blockquote-background-color: hsl(33, 100%, 86%);
+    --bulma-content-blockquote-border-left: 5px solid hsl(356, 75%, 67%);
+    --bulma-content-blockquote-padding: 1.251em 1.501em;
+    --bulma-content-pre-padding: 1.251em 1.501em;
+    --bulma-content-table-cell-border: 1px solid hsl(320, 40%, 40%) ;
+    --bulma-content-table-cell-border-width: 0 0 1.001px;
+    --bulma-content-table-cell-padding: 0.501em 0.751em;
+    --bulma-content-table-cell-heading-color: hsl(280, 52%, 30%);
+    --bulma-content-table-head-cell-border-width: 0 0 2.001px;
+    --bulma-content-table-head-cell-color: hsl(330, 38%, 46%);
+    --bulma-content-table-foot-cell-border-width: 2.001px 0 0;
+    --bulma-content-table-foot-cell-color: hsl(19, 86%, 70%);
+  }
+  
+  .delete {
+    --bulma-delete-dimensions: 1.251rem;
+    --bulma-delete-background-alpha: 0.501;
+    --bulma-delete-color: hsla(356, 75%, 67%, 1);
+  }
+  
+  .icon {
+    --bulma-icon-dimensions: 1.501rem;
+    --bulma-icon-dimensions-small: 1.001rem;
+    --bulma-icon-dimensions-medium: 2.001rem;
+    --bulma-icon-dimensions-large: 3.001rem;
+    --bulma-icon-text-spacing: 0.251em;
+  }
+  
+  .notification {
+    --bulma-notification-h: 19;
+    --bulma-notification-s: 99%;
+    --bulma-notification-background-l: 91%;
+    --bulma-notification-color-l: 14%;
+    --bulma-notification-code-background-color: hsl(33, 97%, 82%) ;
+    --bulma-notification-radius: 0.376rem;
+    --bulma-notification-padding: 1.376em 1.501em;
+  }
+  
+  .progress {
+    --bulma-progress-border-radius: 9998px;
+    --bulma-progress-bar-background-color: hsl(19, 86%, 70%);
+    --bulma-progress-value-background-color: hsla(8, 79%, 64%, 1);
+    --bulma-progress-indeterminate-duration: 1.501s;
+  }
+  
+  .table {
+    --bulma-table-color: hsl(280, 52%, 30%);
+    --bulma-table-background-color: hsl(33, 97%, 72%) ;
+    --bulma-table-cell-border-color: hsl(320, 40%, 40%);
+    --bulma-table-cell-border-style: solid (solid);
+    --bulma-table-cell-border-width: 0 0 1.001px;
+    --bulma-table-cell-padding: 0.501em 0.751em;
+    --bulma-table-cell-heading-color: hsl(280, 52%, 30%);
+    --bulma-table-cell-text-align: left (left);
+    --bulma-table-head-cell-border-width: 0 0 2.001px;
+    --bulma-table-head-cell-color: hsl(330, 38%, 46%);
+    --bulma-table-foot-cell-border-width: 2.001px 0 0;
+    --bulma-table-foot-cell-color: hsl(19, 86%, 70%);
+    --bulma-table-head-background-color: transparent (transparent);
+    --bulma-table-body-background-color: transparent (transparent);
+    --bulma-table-foot-background-color: transparent (transparent);
+    --bulma-table-row-hover-background-color: hsl(33, 100%, 86%);
+    --bulma-table-row-active-background-color: hsla(33, 100%, 86%, 1);
+    --bulma-table-row-active-color: hsla(8, 79%, 64%, 1) ;
+    --bulma-table-striped-row-even-background-color: hsl(33, 97%, 72%);
+    --bulma-table-striped-row-even-hover-background-color: hsl(356, 75%, 67%);
+  }
+  
+  .tag {
+    --bulma-tag-h: 8;
+    --bulma-tag-s: 15%;
+    --bulma-tag-background-l: 97%;
+    --bulma-tag-hover-background-l-delta: -6%;
+    --bulma-tag-active-background-l-delta: -11%;
+    --bulma-tag-color-l: 30%;
+    --bulma-tag-radius: 0.376rem;
+    --bulma-tag-delete-margin: 1.001px;
+  }
+  
+  .title {
+    --bulma-title-color: hsl(8, 79%, 64%) ;
+    --bulma-title-family: false (false);
+    --bulma-title-size: 2.001rem;
+    --bulma-title-weight: 801;
+    --bulma-title-line-height: 1.126;
+    --bulma-title-strong-color: hsl(280, 52%, 30%);
+    --bulma-title-sub-size: 0.76em;
+    --bulma-title-sup-size: 0.76em;
+  }
+  
+  .input {
+    --bulma-input-h: 19;
+    --bulma-input-s: 15%;
+    --bulma-input-l: 99%;
+    --bulma-input-border-style: solid (solid);
+    --bulma-input-border-l: 87%;
+    --bulma-input-hover-border-l-delta: -11%;
+    --bulma-input-active-border-l-delta: -21%;
+    --bulma-input-focus-h: 8deg;
+    --bulma-input-focus-s: 99%;
+    --bulma-input-focus-l: 64%;
+    --bulma-input-focus-shadow-size: 0 0 0 0.1876em;
+    --bulma-input-focus-shadow-alpha: 0.251;
+    --bulma-input-color-l: 22%;
+    --bulma-input-background-l: 99%;
+    --bulma-input-height: 2.501em;
+    --bulma-input-shadow: inset 0 0.0625em 0.125em hsla(316, 41%, 38%, 0.05);
+    --bulma-input-placeholder-color: hsla(280, 52%, 30%, 0.3);
+    --bulma-input-disabled-color: hsl(320, 40%, 40%);
+    --bulma-input-disabled-background-color: hsl(33, 97%, 82%);
+    --bulma-input-disabled-border-color: hsl(330, 38%, 46%);
+    --bulma-input-disabled-placeholder-color: hsla(320, 40%, 40%, 0.3);
+    --bulma-input-arrow: hsla(19, 86%, 70%, 1);
+    --bulma-input-icon-color: hsla(356, 75%, 67%, 1) ;
+    --bulma-input-icon-hover-color: hsl(8, 79%, 64%);
+    --bulma-input-icon-focus-color: hsla(8, 79%, 64%, 1);
+    --bulma-input-radius: 0.376rem;
+  }
+  
+  .file {
+    --bulma-file-radius: 0.376rem;
+    --bulma-file-name-border-color: hsl(320, 40%, 40%) ;
+    --bulma-file-name-border-style: solid (solid);
+    --bulma-file-name-border-width: 1px 1px 1.001px 0;
+    --bulma-file-name-max-width: 16.001em;
+    --bulma-file-h: 33;
+    --bulma-file-s: 15%;
+    --bulma-file-background-l: 97%;
+    --bulma-file-hover-background-l-delta: -6%;
+    --bulma-file-active-background-l-delta: -11%;
+    --bulma-file-border-l: 87%;
+    --bulma-file-hover-border-l-delta: -11%;
+    --bulma-file-active-border-l-delta: -21%;
+    --bulma-file-cta-color-l: 22%;
+    --bulma-file-name-color-l: 22%;
+    --bulma-file-hover-color-l-delta: -6%;
+    --bulma-file-active-color-l-delta: -11%;
+  }
+  
+  .footer {
+    --bulma-footer-background-color: hsl(33, 97%, 72%) ;
+    --bulma-footer-color: false (false);
+    --bulma-footer-padding: 3.001rem 1.5rem 6rem;
+  }
+  
+  .hero {
+    --bulma-hero-body-padding: 3.001rem 1.5rem;
+    --bulma-hero-body-padding-tablet: 3.001rem 3rem;
+    --bulma-hero-body-padding-small: 1.501rem;
+    --bulma-hero-body-padding-medium: 9.001rem 4.5rem;
+    --bulma-hero-body-padding-large: 18.001rem 6rem;
+  }
+  
+  .media {
+    --bulma-media-border-color: hsla(320, 40%, 40%, .5);
+    --bulma-media-border-size: 1.001px;
+    --bulma-media-spacing: 1.001rem;
+    --bulma-media-spacing-large: 1.501rem;
+    --bulma-media-content-spacing: 0.751rem;
+    --bulma-media-level-1-spacing: 0.751rem;
+    --bulma-media-level-1-content-spacing: 0.501rem;
+    --bulma-media-level-2-spacing: 0.501rem;
+  }
+  
+  .section {
+    --bulma-section-padding: 3.001rem 1.5rem;
+    --bulma-section-padding-desktop: 3.001rem 3rem;
+    --bulma-section-padding-medium: 9.001rem 4.5rem;
+    --bulma-section-padding-large: 18.001rem 6rem;
+  }
+  
+  
