@@ -563,12 +563,12 @@
     background: linear-gradient(
         120deg, 
         #ffdeb7,  /* Light Buttermilk */
-        #ffcd8f,  /* Soft Honey Gold */
+       /* #ffcd8f,  /* Soft Honey Gold */           /* I took Soft Honey Gold out because it was too orange/light for the gradient */
         #fed7a7,  /* Pastel Yellow-Orange */
        /* #f0b45f,  /* Warm Yellow-Orange Hue */    /* I took Warm Yellow-Orange Hue out because it was too dark for the gradient */
-        #f9af72,  /* Apricot Glow */
-       /* #f59b71,  /* Warm Peach */                /* I took Warm Peach out because it was too dark for the gradient */
         #ffb085,  /* Peachy Orange */
+       /* #f9af72,  /* Apricot Glow */              /* I took Warm Apricot Glow out because it was too orange for the gradient */
+       /* #f59b71,  /* Warm Peach */                /* I took Warm Peach out because it was too dark for the gradient */
         #ed7c74,   /* Warm Blush */
        /* #a33322,  /* Warm Coral Red-Orange */     /* I took Warm Coral Red-Orange out because it was too dark for the gradient */
        /* #91242b,  /* Vibrant Crimson Red */       /* I took Vibrant Crimson Red out because it was too dark for the gradient */
