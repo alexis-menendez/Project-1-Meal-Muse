@@ -1,0 +1,166 @@
+:root {
+    --primary-color: #5c2576; /* Deep Plum */
+    --secondary-color: #f0b45f; /* Warm Yellow-Orange Hue */
+    --background-gradient: linear-gradient(
+      120deg,
+      #ffdeb7, 
+      #fed7a7, 
+      #ffb085, 
+      #ed7c74, 
+      #e96b74, 
+      #d35f74, 
+      #bb5374, 
+      #a34874, 
+      #603956, 
+      #5c2576
+    );
+    --light-text: #ffe9dd; /* Light Peach */
+    --dark-text: #16021f; /* Dark Plum */
+    --border-color: #f8b693; /* Faded Cranberry */
+    --hover-highlight: #f0b45f; /* Warm Yellow-Orange Hue */
+    --focus-glow: rgba(240, 180, 95, 0.5); /* Soft Glow */
+  }
+  
+  body {
+    font-family: "Inter", "SF Pro", "Segoe UI", sans-serif;
+    background: var(--background-gradient);
+    color: var(--dark-text);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .calendarPane {
+    background-color: var(--light-text);
+    color: var(--dark-text);
+    flex: 1;
+    border: 2px solid var(--border-color);
+    border-radius: 0.76rem;
+    padding: 20px;
+    overflow: auto;
+    box-shadow: 0 0.5em 1em -0.125em rgba(0, 0, 0, 0.1);
+  }
+  
+  .calendarPane h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--primary-color);
+  }
+  
+  .mealCalendar {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+  
+  .mealCalendar thead th {
+    background-color: var(--secondary-color);
+    color: var(--light-text);
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+  }
+  
+  .mealCalendar tbody td {
+    width: 14.285%;
+    min-height: 120px;
+    border: 1px solid var(--border-color);
+    vertical-align: top;
+    padding: 8px;
+    background-color: var(--light-text);
+    position: relative;
+    color: var(--dark-text);
+  }
+  
+  .mealCalendar tbody td:hover {
+    background-color: var(--hover-highlight);
+    cursor: pointer;
+  }
+  
+  .dayNumber {
+    display: inline-block;
+    background: var(--secondary-color);
+    color: var(--light-text);
+    padding: 4px 8px;
+    border-radius: 0.76rem;
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+  }
+  
+  .rightPane {
+    background-color: var(--light-text);
+    flex: 0 0 18%;
+    max-width: 250px;
+    border: 2px solid var(--border-color);
+    border-radius: 0.76rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .scrollBtn {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 0.76rem;
+  }
+  
+  .scrollBtn:hover {
+    background-color: var(--hover-highlight);
+    color: var(--dark-text);
+  }
+  
+  .scrollBox {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+  }
+  
+  .scrollBox h2 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+  }
+  
+  .input, .textarea {
+    background-color: var(--light-text);
+    color: var(--dark-text);
+    border: 1px solid var(--border-color);
+    padding: 0.5rem;
+    border-radius: 0.76rem;
+  }
+  
+  .input::placeholder, .textarea::placeholder {
+    color: #a48b97;
+  }
+  
+  .input:focus, .textarea:focus {
+    border-color: var(--hover-highlight);
+    box-shadow: 0 0 5px var(--focus-glow);
+  }
+  
+  .navbar-item {
+    color: var(--dark-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .navbar-item:hover {
+    background-color: var(--hover-highlight);
+    color: var(--dark-text);
+  }
+  
