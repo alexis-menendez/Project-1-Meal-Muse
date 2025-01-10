@@ -1,253 +1,166 @@
-/* 
-  Basic reset:
-  - Removes default browser margin/padding 
-  - Applies box-sizing: border-box so width/height includes padding & borders
-*/
-* {
+:root {
+    --primary-color: #5c2576; /* Deep Plum */
+    --secondary-color: #f0b45f; /* Warm Yellow-Orange Hue */
+    --background-gradient: linear-gradient(
+      120deg,
+      #ffdeb7, 
+      #fed7a7, 
+      #ffb085, 
+      #ed7c74, 
+      #e96b74, 
+      #d35f74, 
+      #bb5374, 
+      #a34874, 
+      #603956, 
+      #5c2576
+    );
+    --light-text: #ffe9dd; /* Light Peach */
+    --dark-text: #16021f; /* Dark Plum */
+    --border-color: #f8b693; /* Faded Cranberry */
+    --hover-highlight: #f0b45f; /* Warm Yellow-Orange Hue */
+    --focus-glow: rgba(240, 180, 95, 0.5); /* Soft Glow */
+  }
+  
+  body {
+    font-family: "Inter", "SF Pro", "Segoe UI", sans-serif;
+    background: var(--background-gradient);
+    color: var(--dark-text);
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    line-height: 1.6;
   }
   
-  /* 
-    Make sure the <html> and <body> elements each take up full width/height.
-    This sets the stage for using 100% of the browser's viewport space.
-  */
-  html,
-  body {
-    width: 100%;
-    height: 100%;
-  }
-  
-  /* 
-    Body styles:
-    - Background color (light gray #f4f4f4)
-    - Font: Segoe UI (or fallback Tahoma, Verdana, sans-serif)
-    - Text color: #333 (dark gray)
-    - Remove any default margin/padding to achieve full-screen layout
-  */
-  body {
-    background: #f4f4f4;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* 
-    .container:
-    - Uses Flexbox to place two columns side by side
-    - Occupies 100% width & full viewport height (100vh)
-    - Adds 20px padding around edges for spacing
-    - gap: 20px adds space between the calendar pane and right pane
-  */
   .container {
     display: flex;
     flex-direction: row;
     width: 100%;
     height: 100vh;
-    gap: 60px;
-    padding: 80px;
+    gap: 20px;
+    padding: 20px;
     box-sizing: border-box;
   }
   
-  /* 
-    .calendarPane: 
-    - This is the main calendar area on the left side
-    - flex: 1 means it expands to take all remaining space (makes calendar wide)
-    - background: white
-    - border & border-radius: simple box styling
-    - padding: 20px for internal spacing
-    - overflow: auto allows it to scroll if the content overflows 
-  */
   .calendarPane {
-    background: #fff;
-    flex: 1; 
-    border: 2px solid #ccc;
-    border-radius: 6px;
+    background-color: var(--light-text);
+    color: var(--dark-text);
+    flex: 1;
+    border: 2px solid var(--border-color);
+    border-radius: 0.76rem;
     padding: 20px;
     overflow: auto;
+    box-shadow: 0 0.5em 1em -0.125em rgba(0, 0, 0, 0.1);
   }
   
-  /* 
-    .calendarPane h1: 
-    - Center the title text
-    - Add bottom margin for space
-    - Increase font size
-  */
   .calendarPane h1 {
     text-align: center;
-    margin-bottom: 20px;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    color: var(--primary-color);
   }
   
-  /* 
-    .mealCalendar:
-    - A table for displaying the days of the month
-    - width: 100% makes it expand to the full width of .calendarPane
-    - border-collapse: collapse merges adjacent cell borders
-    - table-layout: fixed ensures each column has the same width
-  */
   .mealCalendar {
     width: 100%;
-    /*border-collapse: collapse;*/
+    border-collapse: collapse;
     table-layout: fixed;
   }
   
-  /* 
-    .mealCalendar thead th:
-    - Styles the header row (days of the week)
-    - Gray background, uppercase text
-    - center-aligned, padded
-    - border: 1px for a simple cell border
-  */
   .mealCalendar thead th {
-    background-color: #d9d9d9;
+    background-color: var(--secondary-color);
+    color: var(--light-text);
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: bold;
     text-align: center;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-color);
   }
   
-  /* 
-    .mealCalendar tbody td:
-    - Each day cell in the calendar
-    - width: 14.285% => 100% / 7 columns
-    - min-height: 120px => each cell is taller (bigger day blocks)
-    - border: 1px solid #ccc for the cell borders
-    - vertical-align: top => text starts at the top of the cell
-    - padding: 8px => spacing inside each cell
-    - position: relative => might be used for placing absolutely positioned elements (like events)
-  */
   .mealCalendar tbody td {
     width: 14.285%;
-    min-height: 160px;
-    border: 1px solid #ccc;
+    min-height: 120px;
+    border: 1px solid var(--border-color);
     vertical-align: top;
     padding: 8px;
+    background-color: var(--light-text);
     position: relative;
+    color: var(--dark-text);
   }
   
-  /* 
-    .dayNumber:
-    - The little date label inside each calendar cell
-    - Inline-block with a light gray (#eee) background
-    - Adds some padding and rounded corners
-    - margin-bottom: 8px for spacing below the date
-  */
-  .dayNumber {
-    display: inline-block;
-    /*background: #eee;*/
-    /*padding: 4px 8px;*/
-    border-radius: 4px;
-    font-size: 0.9rem;
-    margin-bottom: 60px;
-  }
-  
-  /* 
-    Hover effect on each table cell:
-    - Slight background-color change (#fafafa)
-    - cursor: pointer to indicate interactivity (clickable)
-  */
   .mealCalendar tbody td:hover {
-    background-color: #fafafaab;
+    background-color: var(--hover-highlight);
     cursor: pointer;
   }
   
-  /* 
-    .rightPane:
-    - The recipes/notes panel on the right side
-    - flex: 0 0 18% => fixed at about 18% of the total width
-    - max-width: 250px => won't exceed 250px in width even on large screens
-    - Same styling approach as the left pane: border, background, rounding
-    - display: flex & flex-direction: column => stack content vertically
-    - justify-content: space-between => places "Scroll Up" at top and "Scroll Down" at bottom
-  */
+  .dayNumber {
+    display: inline-block;
+    background: var(--secondary-color);
+    color: var(--light-text);
+    padding: 4px 8px;
+    border-radius: 0.76rem;
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+  }
+  
   .rightPane {
-    background: #fff;
+    background-color: var(--light-text);
     flex: 0 0 18%;
     max-width: 250px;
-    border: 2px solid #ccc;
-    border-radius: 10px;
+    border: 2px solid var(--border-color);
+    border-radius: 0.76rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
   
-  /* 
-    .scrollBtn:
-    - The "Scroll Up" and "Scroll Down" buttons
-    - Background-color: blueish (#6666ff), white text
-    - No border
-    - Padding for a larger clickable area
-    - Pointer cursor
-  */
   .scrollBtn {
-    background-color: #6666ff;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--light-text);
     border: none;
     padding: 12px;
     font-size: 1rem;
     cursor: pointer;
+    border-radius: 0.76rem;
   }
   
-  /* 
-    .scrollBtn:hover:
-    - Slightly darker background when hovering
-  */
   .scrollBtn:hover {
-    background-color: #5555e0;
+    background-color: var(--hover-highlight);
+    color: var(--dark-text);
   }
   
-  /* 
-    .scrollBox:
-    - The scrollable content area in the right pane
-    - flex: 1 => fill remaining vertical space between the two buttons
-    - overflow-y: auto => becomes scrollable
-    - padding: 20px => spacing around content
-  */
   .scrollBox {
     flex: 1;
     overflow-y: auto;
     padding: 20px;
   }
   
-  /* 
-    .scrollBox h2:
-    - Slightly larger heading font (1.2rem)
-    - Margin-bottom for spacing 
-  */
   .scrollBox h2 {
     margin-bottom: 10px;
     font-size: 1.2rem;
+    color: var(--primary-color);
   }
   
-  /* 
-    .scrollBox p:
-    - Basic paragraph styling with extra margin at the bottom
-    - line-height: 1.4 for readability
-  */
-  .scrollBox p {
-    margin-bottom: 10px;
-    line-height: 1.4;
+  .input, .textarea {
+    background-color: var(--light-text);
+    color: var(--dark-text);
+    border: 1px solid var(--border-color);
+    padding: 0.5rem;
+    border-radius: 0.76rem;
   }
   
-  /* 
-    #notesList:
-    - Circle-style list (•) 
-    - Indent list items by using margin-left
-  */
-  #notesList {
-    list-style-type: circle;
-    margin-left: 20px;
+  .input::placeholder, .textarea::placeholder {
+    color: #a48b97;
   }
   
-  /* 
-    #notesList li:
-    - Adds a bit of vertical spacing between each list item
-  */
-  #notesList li {
-    margin-bottom: 6px;
+  .input:focus, .textarea:focus {
+    border-color: var(--hover-highlight);
+    box-shadow: 0 0 5px var(--focus-glow);
+  }
+  
+  .navbar-item {
+    color: var(--dark-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .navbar-item:hover {
+    background-color: var(--hover-highlight);
+    color: var(--dark-text);
   }
   
