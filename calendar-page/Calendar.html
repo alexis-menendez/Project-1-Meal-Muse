@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/override.css">
+    <style>
+        .custom-navbar { /* This is part of the navbar */
+            background-color: #bb5374; /* Faded Cranberry */
+            border-bottom: 2px solid black;
+        }
+        .navbar-item {
+            color: #16021f; /* Very Dark Plum */
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .navbar-item:hover {
+            background-color: #f0b45f; /* Warm Yellow-Orange Hue */
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar --> 
+    <nav class="navbar custom-navbar">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="index.html">Meal Muse</a>
+            <a class="navbar-item" href="calendar.html">Calendar</a>
+            <a class="navbar-item" href="recipe-library.html">Recipe Library</a>
+            <a class="navbar-item is-active" href="recipe-creation.html">Add Recipe</a>
+            <button id="dark-mode-toggle" class="button is-dark">Toggle Dark Mode</button>
+        </div>
+    </nav>
+
+
+  <div class="container">
+    
+    <div class="calendarPane">
+      <h1>January 2025 Meal Calendar</h1>
+      <table class="mealCalendar">
+        <thead>
+          <tr>
+            <th>Sun</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><span class="dayNumber">1</span></td>
+            <td><span class="dayNumber">2</span></td>
+            <td><span class="dayNumber">3</span></td>
+            <td><span class="dayNumber">4</span></td>
+          </tr>
+          <tr>
+            <td><span class="dayNumber">5</span></td>
+            <td><span class="dayNumber">6</span></td>
+            <td><span class="dayNumber">7</span></td>
+            <td><span class="dayNumber">8</span></td>
+            <td><span class="dayNumber">9</span></td>
+            <td><span class="dayNumber">10</span></td>
+            <td><span class="dayNumber">11</span></td>
+          </tr>
+          <tr>
+            <td><span class="dayNumber">12</span></td>
+            <td><span class="dayNumber">13</span></td>
+            <td><span class="dayNumber">14</span></td>
+            <td><span class="dayNumber">15</span></td>
+            <td><span class="dayNumber">16</span></td>
+            <td><span class="dayNumber">17</span></td>
+            <td><span class="dayNumber">18</span></td>
+          </tr>
+          <tr>
+            <td><span class="dayNumber">19</span></td>
+            <td><span class="dayNumber">20</span></td>
+            <td><span class="dayNumber">21</span></td>
+            <td><span class="dayNumber">22</span></td>
+            <td><span class="dayNumber">23</span></td>
+            <td><span class="dayNumber">24</span></td>
+            <td><span class="dayNumber">25</span></td>
+          </tr>
+          <tr>
+            <td><span class="dayNumber">26</span></td>
+            <td><span class="dayNumber">27</span></td>
+            <td><span class="dayNumber">28</span></td>
+            <td><span class="dayNumber">29</span></td>
+            <td><span class="dayNumber">30</span></td>
+            <td><span class="dayNumber">31</span></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <div class="rightPane">
+      <button class="scrollBtn">Scroll Up</button>
+      <div class="scrollBox">
+        <h2>Recipes/Notes</h2>
+        <p>
+          This section could hold a list of recipes for each selected day, 
+          or general notes. Without JavaScript, it won’t scroll automatically.
+        </p>
+        <ul id="notesList">
+          <li>Sample Recipe 1</li>
+          <li>Sample Recipe 2</li>
+          <li>Another idea...</li>
+        </ul>
+      </div>
+      <button class="scrollBtn">Scroll Down</button>
+    </div>
+
+  </div>
+
+</body>
+</html>
