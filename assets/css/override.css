@@ -1,6 +1,6 @@
  /*Custom CSS (Override Bulma)*/     /* This is where you can add overrides for specific elements on your page without having to change the settings across the entire website (I think) */
 
-  /*Background Gradient*/    /* Some of the colors are commented out because they didb't work with the gradient, but I left them here for easy access to refence when changing colors of other elements */
+/*Background Gradient*/    /* Some of the colors are commented out because they didb't work with the gradient, but I left them here for easy access to refence when changing colors of other elements */
   body {
     background: linear-gradient(
         120deg, 
@@ -25,33 +25,56 @@
        /* #702e75,  /* Dusky Violet */              /* I took Dusky Violet out because it was too dark for the gradient */
         #5c2576  /* Deep Plum */
         );
-}
+  }
 
- /*navbar*/
-.navbar-item {
+/*navbar*/
+  .navbar-item {
   color: #16021f;  /* Very Dark Plum */
   transition: background-color 0.3s ease, color 0.3s ease;
-}
+  }
 
-.navbar-item:hover {
-  background-color: #f0b45f;  /* Warm Yellow-Orange Hue */
-  color: black;
-}
+  .navbar-item:hover {
+    background-color: #f0b45f;  /* Warm Yellow-Orange Hue */
+    color: black;
+  }
 
- /*text input boxes*/
-.input, .textarea {
-  background-color: #ffe9dd; /* Light Peach background */
-  color: #16021f; /* Dark Plum text */
-  border-color: #f8b693; /* Faded Cranberry border */
-}
+/*text input boxes*/
+  .input, .textarea {
+    background-color: #ffe9dd; /* Light Peach background */
+    color: #16021f; /* Dark Plum text */
+    border-color: #f8b693; /* Faded Cranberry border */
+  }
 
-.input::placeholder, .textarea::placeholder {
-  color: #a48b97; /* Muted placeholder text color */
-}
+  .input::placeholder, .textarea::placeholder {
+    color: #a48b97; /* Muted placeholder text color */
+  }
 
-.input:focus, .textarea:focus {
-  border-color: #f0b45f; /* Highlight the border when focused */
-  box-shadow: 0 0 5px rgba(240, 180, 95, 0.5); /* Add a glowing effect */
-}
-  
-  
+  .input:focus, .textarea:focus {
+    border-color: #f0b45f; /* Highlight the border when focused */
+    box-shadow: 0 0 5px rgba(240, 180, 95, 0.5); /* Add a glowing effect */
+  }
+
+
+/* Night Mode Toggle */
+  body.dark-mode {
+    background-color: #1e1e1e; /* Dark gray */
+    color: #f5f5f5; /* Light text */
+  }
+
+  .navbar.dark-mode {
+    background-color: #2b2b2b; /* Dark navbar */
+  }
+
+  .input.dark-mode, .textarea.dark-mode {
+    background-color: #2e2e2e; /* Dark input background */
+    color: #ffffff;
+  }
+
+  .box.dark-mode {
+    background-color: #3a3a3a; /* Dark box */
+  }
+
+  .button.is-dark {
+    background-color: #4a4a4a;
+    color: white;
+  }

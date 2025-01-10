@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/override.css">
     <style>
-        .custom-navbar { /* This is part of the navbar, but there is also bulma css in the stylesheet that it needs */
+        .custom-navbar { /* This is part of the navbar */
             background-color: #bb5374; /* Faded Cranberry */
             border-bottom: 2px solid black;
         }
@@ -30,6 +30,7 @@
             <a class="navbar-item" href="calendar.html">Calendar</a>
             <a class="navbar-item" href="recipe-library.html">Recipe Library</a>
             <a class="navbar-item is-active" href="recipe-creation.html">Add Recipe</a>
+            <button id="dark-mode-toggle" class="button is-dark">Toggle Dark Mode</button>
         </div>
     </nav>
 
@@ -61,5 +62,8 @@
             </div>
         </div>
     </section>
+    <!-- JavaScript -->
+    <script src="assets/js/recipe-creation.js"></script>
+    <script src="assets/js/toggle.js"></script>    
 </body>
 </html>
