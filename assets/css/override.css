@@ -1,0 +1,57 @@
+ /*Custom CSS (Override Bulma)*/     /* This is where you can add overrides for specific elements on your page without having to change the settings across the entire website (I think) */
+
+  /*Background Gradient*/    /* Some of the colors are commented out because they didb't work with the gradient, but I left them here for easy access to refence when changing colors of other elements */
+  body {
+    background: linear-gradient(
+        120deg, 
+        #ffdeb7,  /* Light Buttermilk */
+       /* #ffcd8f,  /* Soft Honey Gold */           /* I took Soft Honey Gold out because it was too orange/light for the gradient */
+        #fed7a7,  /* Pastel Yellow-Orange */
+       /* #f0b45f,  /* Warm Yellow-Orange Hue */    /* I took Warm Yellow-Orange Hue out because it was too dark for the gradient */
+        #ffb085,  /* Peachy Orange */
+       /* #f9af72,  /* Apricot Glow */              /* I took Warm Apricot Glow out because it was too orange for the gradient */
+       /* #f59b71,  /* Warm Peach */                /* I took Warm Peach out because it was too dark for the gradient */
+        #ed7c74,   /* Warm Blush */
+       /* #a33322,  /* Warm Coral Red-Orange */     /* I took Warm Coral Red-Orange out because it was too dark for the gradient */
+       /* #91242b,  /* Vibrant Crimson Red */       /* I took Vibrant Crimson Red out because it was too dark for the gradient */
+        #e96b74,  /* Coral Pink */
+        #d35f74,  /* Cherry Blossom */
+        #bb5374,  /* Faded Cranberry */
+        #ba5374,  /* Rosy Red */
+        #a34874,  /* Rosewood Mauve */
+        #75485f,  /* Muted Purple-Pink */
+       /* #503c5b,  /* Muted Dark Purple */         /* I took Muted Dark Purple out because it was too dark for the gradient */
+        #603956,  /* Rich Plum */
+       /* #702e75,  /* Dusky Violet */              /* I took Dusky Violet out because it was too dark for the gradient */
+        #5c2576  /* Deep Plum */
+        );
+}
+
+ /*navbar*/
+.navbar-item {
+  color: #16021f;  /* Very Dark Plum */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-item:hover {
+  background-color: #f0b45f;  /* Warm Yellow-Orange Hue */
+  color: black;
+}
+
+ /*text input boxes*/
+.input, .textarea {
+  background-color: #ffe9dd; /* Light Peach background */
+  color: #16021f; /* Dark Plum text */
+  border-color: #f8b693; /* Faded Cranberry border */
+}
+
+.input::placeholder, .textarea::placeholder {
+  color: #a48b97; /* Muted placeholder text color */
+}
+
+.input:focus, .textarea:focus {
+  border-color: #f0b45f; /* Highlight the border when focused */
+  box-shadow: 0 0 5px rgba(240, 180, 95, 0.5); /* Add a glowing effect */
+}
+  
+  
