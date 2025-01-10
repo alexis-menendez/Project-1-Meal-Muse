@@ -1,4 +1,8 @@
-    // Night Mode Toggle
+
+// This doesn't work yet and is ugly, I am working on it - Alex
+
+
+// Night Mode Toggle
 
 document.addEventListener('DOMContentLoaded', () => {
     const darkModeToggle = document.getElementById('dark-mode-toggle');
