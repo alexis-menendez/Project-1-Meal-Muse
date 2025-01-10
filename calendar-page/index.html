@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>January 2025 Meal Calendar</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <!-- Left Section: The Calendar -->
+    <div class="calendarPane">
+      <h1>January 2025 Meal Calendar</h1>
+      <table class="mealCalendar">
+        <thead>
+          <tr>
+            <!-- Table headers for days of the week (Sun - Sat) -->
+            <th>Sun</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+          </tr>
+        </thead>
+        <tbody id="calendarBody">
+          <!-- Filled by script.js -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Right Section: Scrollable Container -->
+    <div class="rightPane">
+      <button class="scrollBtn" id="scrollUp">Scroll Up</button>
+      <div class="scrollBox" id="scrollBox">
+        <!-- You might put recipes, notes, etc., here or dynamically fill it via JS -->
+        <h2>Recipes/Notes</h2>
+        <p>
+          This section could hold a list of recipes for each selected day.
+          You can make it dynamic by listening to clicks on the calendar cells.
+        </p>
+        <ul id="notesList">
+          <li>Sample Recipe 1</li>
+          <li>Sample Recipe 2</li>
+          <li>Another idea...</li>
+        </ul>
+      </div>
+      <button class="scrollBtn" id="scrollDown">Scroll Down</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
