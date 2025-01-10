@@ -34,24 +34,24 @@
   }
 
   .navbar-item:hover {
-    background-color: #f0b45f;  /* Warm Yellow-Orange Hue */
+    background-color: #f0b45f;  
     color: black;
   }
 
 /*text input boxes*/
   .input, .textarea {
-    background-color: #ffe9dd; /* Light Peach background */
-    color: #16021f; /* Dark Plum text */
-    border-color: #f8b693; /* Faded Cranberry border */
+    background-color: #ffe9dd; 
+    color: #16021f; 
+    border-color: #f8b693; 
   }
 
   .input::placeholder, .textarea::placeholder {
-    color: #a48b97; /* Muted placeholder text color */
+    color: #a48b97; 
   }
 
   .input:focus, .textarea:focus {
-    border-color: #f0b45f; /* Highlight the border when focused */
-    box-shadow: 0 0 5px rgba(240, 180, 95, 0.5); /* Add a glowing effect */
+    border-color: #f0b45f; 
+    box-shadow: 0 0 5px rgba(240, 180, 95, 0.5); 
   }
 
 
