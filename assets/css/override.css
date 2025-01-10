@@ -56,25 +56,3 @@
 
 
 /* Night Mode Toggle */
-  body.dark-mode {
-    background-color: #1e1e1e; /* Dark gray */
-    color: #f5f5f5; /* Light text */
-  }
-
-  .navbar.dark-mode {
-    background-color: #2b2b2b; /* Dark navbar */
-  }
-
-  .input.dark-mode, .textarea.dark-mode {
-    background-color: #2e2e2e; /* Dark input background */
-    color: #ffffff;
-  }
-
-  .box.dark-mode {
-    background-color: #3a3a3a; /* Dark box */
-  }
-
-  .button.is-dark {
-    background-color: #4a4a4a;
-    color: white;
-  }
