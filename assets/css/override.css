@@ -54,5 +54,55 @@
     box-shadow: 0 0 5px rgba(240, 180, 95, 0.5); 
   }
 
+  /* Calendar Styles */
+.calendar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calendar-current-date {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.calendar-navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.calendar-dates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+.calendar-dates div {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.calendar-dates .inactive {
+  color: #aaa;
+}
+
+.calendar-dates .active {
+  background-color: #f0b45f;
+  color: white;
+}
+
+.calendar-dates .selected {
+  background-color: #bb5374;
+  color: white;
+}
 
 
