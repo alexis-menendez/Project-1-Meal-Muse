@@ -106,3 +106,113 @@
 }
 
 
+/* Small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  /* Add your CSS rules here */
+  body {
+    background-color: rgb(0, 191, 255);
+  }
+}
+
+/* Medium devices (tablets, 600px to 768px) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  /* Add your CSS rules here */
+  body {
+    background-color: rgb(157, 0, 255);
+  }
+}
+
+/* Large devices (desktops, 768px and up) */
+@media only screen and (min-width: 768px) {
+  /* Add your CSS rules here */
+  body {
+    background-color: rgb(255, 0, 119);
+  }
+}
+
+body.tie-dye-dark {
+  background: radial-gradient(circle, #0d0061, #85003a, #02526f);
+  color: #ffffff;
+}
+
+body.tie-dye-dark h1,
+body.tie-dye-dark h2,
+body.tie-dye-dark h3,
+body.tie-dye-dark h4,
+body.tie-dye-dark h5,
+body.tie-dye-dark h6 {
+  color: #ffffff; /* Change this to your desired heading color */
+}
+
+body.tie-dye-light {
+  background: radial-gradient(circle, #7a00f5, #4ca1af, #d851c0);
+  color: #fff;
+}
+
+body.tie-dye-dark h1,
+body.tie-dye-dark h2,
+body.tie-dye-dark h3,
+body.tie-dye-dark h4,
+body.tie-dye-dark h5,
+body.tie-dye-dark h6 {
+  color: #ffffff; /* Change this to your desired heading color */
+}
+
+body.mood1-hunter {
+  background: radial-gradient(circle, #ff0000, #ffff00, #1302ff);
+  color: #ffffff;
+}
+
+body.tie-dye-dark h1,
+body.tie-dye-dark h2,
+body.tie-dye-dark h3,
+body.tie-dye-dark h4,
+body.tie-dye-dark h5,
+body.tie-dye-dark h6 {
+  color: #ffffff; /* Change this to your desired heading color */
+}
+
+
+body.mood2-nicholas {
+  background: radial-gradient(circle, #b475eb, #ffffff84, #df8f3f);
+  color: #ffffff;
+}
+
+body.tie-dye-dark h1,
+body.tie-dye-dark h2,
+body.tie-dye-dark h3,
+body.tie-dye-dark h4,
+body.tie-dye-dark h5,
+body.tie-dye-dark h6 {
+  color: #ffffff; /* Change this to your desired heading color */
+}
+
+
+body.mood3-jameson {
+  background: radial-gradient(circle, #0071fc, #086a0d, #af03ff);
+  color: #ffffff;
+}
+
+body.tie-dye-dark h1,
+body.tie-dye-dark h2,
+body.tie-dye-dark h3,
+body.tie-dye-dark h4,
+body.tie-dye-dark h5,
+body.tie-dye-dark h6 {
+  color: #ffffff; /* Change this to your desired heading color */
+}
+
+
+body.mood4-alexis {
+  background: radial-gradient(circle, #26648e, #53d2dc, #ffe3b3);
+  color: #ffffff;
+}
+
+body.tie-dye-dark h1,
+body.tie-dye-dark h2,
+body.tie-dye-dark h3,
+body.tie-dye-dark h4,
+body.tie-dye-dark h5,
+body.tie-dye-dark h6 {
+  color: #ffffff; /* Change this to your desired heading color */
+}
