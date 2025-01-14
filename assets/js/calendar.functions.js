@@ -5,32 +5,17 @@ let year = date.getFullYear();
 let month = date.getMonth();
 
 const day = document.querySelector(".calendar-dates");
-
-const currdate = document
-    .querySelector(".calendar-current-date");
-
-const calnav = document
-    .querySelectorAll(".calendar-navigation span");
+const currdate = document.querySelector(".calendar-current-date");
+const calnav = document.querySelectorAll(".calendar-navigation span");
 
 // Array of month names
 const months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December"
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
 ];
 
 // Function to generate the calendar
 const theCalendar = () => {
-
     // Get the first day of the month
     let dayone = new Date(year, month, 1).getDay();
 
@@ -48,72 +33,57 @@ const theCalendar = () => {
 
     // Loop to add the last dates of the previous month
     for (let i = dayone; i > 0; i--) {
-        lit +=
-            `<li class="inactive">${monthlastdate - i + 1}</li>`;
+        lit += `<div class="inactive">${monthlastdate - i + 1}</div>`;
     }
 
     // Loop to add the dates of the current month
     for (let i = 1; i <= lastdate; i++) {
-
         // Check if the current date is today
         let isToday = i === date.getDate()
             && month === new Date().getMonth()
             && year === new Date().getFullYear()
             ? "active"
             : "";
-        lit += `<li class="${isToday}">${i}</li>`;
+        lit += `<div class="date ${isToday}" data-date="${i}">${i}</div>`;
     }
 
     // Loop to add the first dates of the next month
     for (let i = dayend; i < 6; i++) {
-        lit += `<li class="inactive">${i - dayend + 1}</li>`
+        lit += `<div class="inactive">${i - dayend + 1}</div>`;
     }
 
-    // Update the text of the current date element 
-    // with the formatted current month and year
-    currdate.innerText = `${months[month]} ${year}`;
-
-    // update the HTML of the dates element 
-    // with the generated calendar
+    // Set the inner HTML of the calendar dates
     day.innerHTML = lit;
-}
 
+    // Set current date
+    currdate.innerHTML = `${months[month]} ${year}`;
+
+    // Add event listeners to each date
+    document.querySelectorAll('.date').forEach(dateElement => {
+        dateElement.addEventListener('click', (e) => {
+            document.querySelectorAll('.date').forEach(el => el.classList.remove('selected'));
+            e.target.classList.add('selected');
+            console.log(`Selected date: ${e.target.dataset.date} ${months[month]} ${year}`);
+        });
+    });
+};
+
+// Call the function to generate the calendar
 theCalendar();
 
 // Attach a click event listener to each icon
 calnav.forEach(icon => {
-
-    // When an icon is clicked
     icon.addEventListener("click", () => {
-
-        // Check if the icon is "calendar-prev"
-        // or "calendar-next"
         month = icon.id === "calendar-prev" ? month - 1 : month + 1;
 
-        // Check if the month is out of range
         if (month < 0 || month > 11) {
-
-            // Set the date to the first day of the 
-            // month with the new year
             date = new Date(year, month, new Date().getDate());
-
-            // Set the year to the new year
             year = date.getFullYear();
-
-            // Set the month to the new month
             month = date.getMonth();
-        }
-
-        else {
-
-            // Set the date to the current date
+        } else {
             date = new Date();
         }
 
-        // Call the theCalendar
-        // function to 
-        // update the calendar display
-        theCalendar
-    ();
+        theCalendar();
     });
 });

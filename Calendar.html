@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"> <!-- Bulma CSS Framework -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/override.css">
+    <style>
+        .custom-navbar {
+            background-color: #bb5374; 
+            border-bottom: 2px solid black; 
+        }
+        .navbar-item {
+            color: #16021f; 
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .navbar-item:hover {
+            background-color: #f0b45f; 
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar custom-navbar">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="index.html">Meal Muse</a>
+            <a class="navbar-item" href="calendar.html">Calendar</a>
+            <a class="navbar-item" href="recipe-library.html">Recipe Library</a>
+            <a class="navbar-item is-active" href="recipe-creation.html">Add Recipe</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="calendarPane">
+            <h1>January 2025 Meal Calendar</h1>
+            <div class="calendar">
+                <div class="calendar-current-date"></div>
+                <div class="calendar-navigation">
+                    <span id="calendar-prev">Previous</span>
+                    <span id="calendar-next">Next</span>
+                </div>
+                <div class="calendar-dates"></div>
+            </div>
+        </div>
+        
+        <div class="rightPane">
+            <button class="scrollBtn">Scroll Up</button>
+            <div class="scrollBox">
+                <h2>Recipes/Notes</h2>
+                <p>
+                    This section could hold a list of recipes for each selected day, 
+                    or general notes. Without JavaScript, it won’t scroll automatically.
+                </p>
+                <ul id="notesList">
+                    <li>Sample Recipe 1</li>
+                    <li>Sample Recipe 2</li>
+                    <li>Another idea...</li>
+                </ul>
+            </div>
+            <button class="scrollBtn">Scroll Down</button>
+        </div>
+    </div>
+
+    <script src="assets/js/recipe-creation.js"></script>
+    <script src="assets/js/calendar.functions.js"></script>
+</body>
+</html>
