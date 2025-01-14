@@ -10,8 +10,16 @@
     <link rel="stylesheet" href="assets/css/override.css">
     <style>
         .custom-navbar {
-            background-color: #bb5374; /* Faded Cranberry */
+            background-color: #bb5374; 
             border-bottom: 2px solid black; 
+        }
+        .navbar-item {
+            color: #16021f; 
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .navbar-item:hover {
+            background-color: #f0b45f; 
+            color: black;
         }
     </style>
 </head>
@@ -24,7 +32,6 @@
             <a class="navbar-item" href="calendar.html">Calendar</a>
             <a class="navbar-item" href="recipe-library.html">Recipe Library</a>
             <a class="navbar-item is-active" href="recipe-creation.html">Add Recipe</a>
-            <button id="dark-mode-toggle" class="button is-dark">Toggle Dark Mode</button>
         </div>
     </nav>
 

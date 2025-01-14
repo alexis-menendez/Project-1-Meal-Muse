@@ -468,7 +468,7 @@
   }
   
   .title {
-    --bulma-title-color: #5c2576; /* Deep Plum */
+    --bulma-title-color: #5c2576;
     --bulma-title-family: false (false);
     --bulma-title-size: 2.001rem;
     --bulma-title-weight: 801;
