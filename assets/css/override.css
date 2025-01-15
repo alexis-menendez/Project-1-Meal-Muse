@@ -5,219 +5,391 @@ body {
   height: 100%;
 }
 
+/*Background Gradient*/    /* Some of the colors are commented out because they didb't work with the gradient, but I left them here for easy access to refence when changing colors of other elements */
 body {
   background: linear-gradient(
-    120deg, 
-    #ffdeb7,
-    #fed7a7,
-    #ffb085,
-    #ed7c74,
-    #e96b74,
-    #d35f74,
-    #bb5374,
-    #ba5374,
-    #a34874,
-    #75485f,
-    #603956,
-    #5c2576
+      120deg, 
+      #ffdeb7,  /* Light Buttermilk */
+     /* #ffcd8f,  /* Soft Honey Gold */           /* I took Soft Honey Gold out because it was too orange/light for the gradient */
+      #fed7a7,  /* Pastel Yellow-Orange */
+     /* #f0b45f,  /* Warm Yellow-Orange Hue */    /* I took Warm Yellow-Orange Hue out because it was too dark for the gradient */
+      #ffb085,  /* Peachy Orange */
+     /* #f9af72,  /* Apricot Glow */              /* I took Warm Apricot Glow out because it was too orange for the gradient */
+     /* #f59b71,  /* Warm Peach */                /* I took Warm Peach out because it was too dark for the gradient */
+      #ed7c74,  /* Warm Blush */
+     /* #a33322,  /* Warm Coral Red-Orange */     /* I took Warm Coral Red-Orange out because it was too dark for the gradient */
+     /* #91242b,  /* Vibrant Crimson Red */       /* I took Vibrant Crimson Red out because it was too dark for the gradient */
+      #e96b74,  /* Coral Pink */
+      #d35f74,  /* Cherry Blossom */
+      #bb5374,  /* Faded Cranberry */
+      #ba5374,  /* Rosy Red */
+      #a34874,  /* Rosewood Mauve */
+      #75485f,  /* Muted Purple-Pink */
+     /* #503c5b,  /* Muted Dark Purple */         /* I took Muted Dark Purple out because it was too dark for the gradient */
+      #603956,  /* Rich Plum */
+     /* #702e75,  /* Dusky Violet */              /* I took Dusky Violet out because it was too dark for the gradient */
+      #5c2576  /* Deep Plum */
       );
-    background-repeat: no-repeat;
-    background-attachment: fixed; 
-    background-size: cover;
 }
 
+/*navbar*/
 .navbar-item {
-  color: #16021f;
+  color: #16021f;  /* Very Dark Plum */
   transition: background-color 0.3s ease, color 0.3s ease;
-}
+  }
 
-.navbar-item:hover {
-  background-color: #f0b45f;
-  color: black;
-}
+  .navbar-item:hover {
+    background-color: #f0b45f;  
+    color: black;
+  }
 
-.input, .textarea {
-  background-color: #ffe9dd;
-  color: #16021f;
-  border-color: #f8b693;
-}
+/*text input boxes*/
+  .input, .textarea {
+    background-color: #ffe9dd; 
+    color: #16021f; 
+    border-color: #f8b693; 
+  }
 
-.input::placeholder, .textarea::placeholder {
-  color: #a48b97;
-}
+  .input::placeholder, .textarea::placeholder {
+    color: #a48b97; 
+  }
 
-.input:focus, .textarea:focus {
-  border-color: #f0b45f;
-  box-shadow: 0 0 5px rgba(240, 180, 95, 0.5);
-}
+  .input:focus, .textarea:focus {
+    border-color: #f0b45f; 
+    box-shadow: 0 0 5px rgba(240, 180, 95, 0.5); 
+  }
 
-.custom-navbar {
-  background-color: #bb5374;
-  border-bottom: 2px solid black;
-}
+  /* Calendar Styles */
+  .calendar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .calendar-current-date {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .calendar-navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .calendar-dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+  }
+  
+  .calendar-dates div {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+  
+  .calendar-dates .inactive {
+    color: #aaa;
+  }
+  
+  .calendar-dates .active {
+    background-color: #f0b45f;
+    color: white;
+  }
+  
+  .calendar-dates .selected {
+    background-color: #bb5374;
+    color: white;
+  }
+  
+  
+  /* Small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+    /* Add your CSS rules here */
+    body {
+      background-color: rgb(0, 191, 255);
+    }
+  }
+  
+  /* Medium devices (tablets, 600px to 768px) */
+  @media only screen and (min-width: 600px) and (max-width: 768px) {
+    /* Add your CSS rules here */
+    body {
+      background-color: rgb(157, 0, 255);
+    }
+  }
+  
+  /* Large devices (desktops, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    /* Add your CSS rules here */
+    body {
+      background-color: rgb(255, 0, 119);
+    }
+  }
+  
+  body.tie-dye-dark {
+    background: radial-gradient(circle, #0d0061, #85003a, #02526f);
+    color: #ffffff;
+  }
+  
+  body.tie-dye-dark h1,
+  body.tie-dye-dark h2,
+  body.tie-dye-dark h3,
+  body.tie-dye-dark h4,
+  body.tie-dye-dark h5,
+  body.tie-dye-dark h6 {
+    color: #ffffff; /* Change this to your desired heading color */
+  }
+  
+  body.tie-dye-light {
+    background: radial-gradient(circle, #7a00f5, #4ca1af, #d851c0);
+    color: #fff;
+  }
+  
+  body.tie-dye-dark h1,
+  body.tie-dye-dark h2,
+  body.tie-dye-dark h3,
+  body.tie-dye-dark h4,
+  body.tie-dye-dark h5,
+  body.tie-dye-dark h6 {
+    color: #ffffff; /* Change this to your desired heading color */
+  }
+  
+  body.mood1-hunter {
+    background: radial-gradient(circle, #ff0000, #ffff00, #1302ff);
+    color: #ffffff;
+  }
+  
+  body.tie-dye-dark h1,
+  body.tie-dye-dark h2,
+  body.tie-dye-dark h3,
+  body.tie-dye-dark h4,
+  body.tie-dye-dark h5,
+  body.tie-dye-dark h6 {
+    color: #ffffff; /* Change this to your desired heading color */
+  }
+  
+  
+  body.mood2-nicholas {
+    background: radial-gradient(circle, #b475eb, #ffffff84, #df8f3f);
+    color: #ffffff;
+  }
+  
+  body.tie-dye-dark h1,
+  body.tie-dye-dark h2,
+  body.tie-dye-dark h3,
+  body.tie-dye-dark h4,
+  body.tie-dye-dark h5,
+  body.tie-dye-dark h6 {
+    color: #ffffff; /* Change this to your desired heading color */
+  }
+  
+  
+  body.mood3-jameson {
+    background: radial-gradient(circle, #0071fc, #086a0d, #af03ff);
+    color: #ffffff;
+  }
+  
+  body.tie-dye-dark h1,
+  body.tie-dye-dark h2,
+  body.tie-dye-dark h3,
+  body.tie-dye-dark h4,
+  body.tie-dye-dark h5,
+  body.tie-dye-dark h6 {
+    color: #ffffff; /* Change this to your desired heading color */
+  }
+  
+  
+  body.mood4-alexis {
+    background: radial-gradient(circle, #26648e, #53d2dc, #ffe3b3);
+    color: #ffffff;
+  }
+  
+  body.tie-dye-dark h1,
+  body.tie-dye-dark h2,
+  body.tie-dye-dark h3,
+  body.tie-dye-dark h4,
+  body.tie-dye-dark h5,
+  body.tie-dye-dark h6 {
+    color: #ffffff; /* Change this to your desired heading color */
+  }
 
-.calendar-container {
-  display: flex;
-  align-items: flex-start;
-  margin-top: 20px;
-  padding: 40px;
-}
-
-.calendar-main {
-  padding: 80px;
-  display: flex;
-  align-items: stretch;
-  gap: 50px;
-  width: 100%;
-  min-height: 100vh;
-}
-
-.calendar-pane {
-  flex: 2;
-  margin-right: 20px;
-  display: flex;
-  flex-direction: column;
-  background-color: #ffffff;
-  border: 2px solid #ccc;
-  border-radius: 8px;
-  padding: 1rem;
-}
-
-.calendar-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 10px;
-}
-
-.calendar-header button {
-  margin: 0 10px;
-  font-size: 1.8rem;
-  font-weight: bold;
-  line-height: 1;
-  position: relative;
-  top: -3px;
-  cursor: pointer;
-  padding: 0.2rem 0.rem;
-}
-
-table.calendar-meal, .calendar-meal {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: center;
-  border: 1px solid #ccc;
-}
-
-.calendar-meal thead th {
-  background-color: #e2e2e2;
-  color: #333;
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-}
-
-.calendar-meal td, .calendar-meal th,
-table.calendar-meal td, table.calendar-meal th {
-  width: 14.2857%;
-  min-height: 80px;
-  vertical-align: top;
-  border: 1px solid #ccc;
-  padding: 5px;
-}
-
-.calendar-meal td {
-  border: 1px solid #eee;
-  text-align: right;
-  height: calc(100vh / 7);
-}
-
-.calendar-dayNumber {
-  font-weight: bold;
-  color: #444;
-  margin-bottom: 3px;
-  display: block;
-}
-
-.calendar-rightPane {
-  flex: 1;
-  background-color: #fff;
-  border: 2px solid #ccc;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem;
-  height: 600px;
-}
-
-.calendar-scrollBox {
-  flex: 1;
-  overflow-y: auto;
-  border: 1px solid #ccc;
-  margin: 10px 0;
-  padding: 10px;
-  min-height: 0;
-  width: 100%;
-}
-
-.calendar-scrollBtn {
-  background-color: #3273dc;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  margin: 5px 0;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-}
-
-.calendar-scrollBtn:hover {
-  background-color: #4a8af4;
-}
-
-#notesList li[draggable="true"] {
-  cursor: move;
-}
-
-.calendar-meal td.drag-over {
-  background-color: #f0f0f0; 
-  border: 2px dashed #3273dc;
-}
-
-.calendar-meal td .recipe-item {
-  display: block;
-  background-color: #eee;
-  margin: 2px 0;
-  padding: 4px;
-  border-radius: 3px;
-  font-size: 0.9rem;
-}
-
-#notesList li {
-  list-style-type: none;
-  background-color: #f8f8f8;
-  margin: 0.5rem 0;
-  padding: 0.5rem;
-  font-weight: 600;
-  text-align: center;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.calendar-scrollBox h2 {
-  text-align: center;
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
-  font-weight: 700;
-}
-
-.calendar-recipe {
-  background-color: #faf3b3;
-  margin-top: 5px;
-  padding: 3px 5px;
-  border-radius: 4px;
-  font-size: 0.9em;
-  cursor: pointer;
-}
-
-.calendar-recipe:hover {
-  background-color: #f7e570;
-}
+  .custom-navbar {
+    background-color: #bb5374; /* Faded Cranberry */
+    border-bottom: 2px solid #603956; /* Rich Plum */
+  }
+  
+  .calendar-container {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+    padding: 40px;
+  }
+  
+  .calendar-main {
+    padding: 80px;
+    display: flex;
+    align-items: stretch;
+    gap: 50px;
+    width: 100%;
+    min-height: 100vh;
+  }
+  
+  .calendar-pane {
+    flex: 2;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffdeb7; /* Light Buttermilk */
+    border: 2px solid #fed7a7; /* Pastel Yellow-Orange */
+    border-radius: 8px;
+    padding: 1rem;
+  }
+  
+  .calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .calendar-header button {
+    margin: 0 10px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1;
+    position: relative;
+    top: -3px;
+    cursor: pointer;
+    padding: 0.2rem 0.rem;
+  }
+  
+  table.calendar-meal, .calendar-meal {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    border: 1px solid #fed7a7; /* Pastel Yellow-Orange */
+  }
+  
+  .calendar-meal thead th {
+    background-color: #ffdeb7; /* Light Buttermilk */
+    color: #603956; /* Rich Plum */
+    padding: 0.75rem;
+    border: 1px solid #fed7a7; /* Pastel Yellow-Orange */
+  }
+  
+  .calendar-meal td, .calendar-meal th,
+  table.calendar-meal td, table.calendar-meal th {
+    width: 14.2857%;
+    min-height: 80px;
+    vertical-align: top;
+    border: 1px solid #fed7a7; /* Pastel Yellow-Orange */
+    padding: 5px;
+  }
+  
+  .calendar-meal td {
+    border: 1px solid #ffe0c7; /* Slightly lighter Pastel Yellow-Orange */
+    text-align: right;
+    height: calc(100vh / 7);
+  }
+  
+  .calendar-dayNumber {
+    font-weight: bold;
+    color: #603956; /* Rich Plum */
+    margin-bottom: 3px;
+    display: block;
+  }
+  
+  .calendar-rightPane {
+    flex: 1;
+    background-color: #ffdeb7; /* Light Buttermilk */
+    border: 2px solid #fed7a7; /* Pastel Yellow-Orange */
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    height: 600px;
+  }
+  
+  .calendar-scrollBox {
+    flex: 1;
+    overflow-y: auto;
+    border: 1px solid #fed7a7; /* Pastel Yellow-Orange */
+    margin: 10px 0;
+    padding: 10px;
+    min-height: 0;
+    width: 100%;
+  }
+  
+  .calendar-scrollBtn {
+    background-color: #bb5374; /* Faded Cranberry */
+    color: #ffdeb7; /* Light Buttermilk */
+    border: none;
+    border-radius: 4px;
+    margin: 5px 0;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  
+  .calendar-scrollBtn:hover {
+    background-color: #d35f74; /* Cherry Blossom */
+  }
+  
+  #notesList li[draggable="true"] {
+    cursor: move;
+  }
+  
+  .calendar-meal td.drag-over {
+    background-color: #ffe0c7; /* Slightly lighter Pastel Yellow-Orange */
+    border: 2px dashed #bb5374; /* Faded Cranberry */
+  }
+  
+  .calendar-meal td .recipe-item {
+    display: block;
+    background-color: #ffe0c7; /* Slightly lighter Pastel Yellow-Orange */
+    margin: 2px 0;
+    padding: 4px;
+    border-radius: 3px;
+    font-size: 0.9rem;
+  }
+  
+  #notesList li {
+    list-style-type: none;
+    background-color: #ffdeb7; /* Light Buttermilk */
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    font-weight: 600;
+    text-align: center;
+    border: 1px solid #fed7a7; /* Pastel Yellow-Orange */
+    border-radius: 4px;
+  }
+  
+  .calendar-scrollBox h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  
+  .calendar-recipe {
+    background-color: #ffb085; /* Peachy Orange */
+    margin-top: 5px;
+    padding: 3px 5px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    cursor: pointer;
+  }
+  
+  .calendar-recipe:hover {
+    background-color: #fed7a7; /* Pastel Yellow-Orange */
+  }
+  
