@@ -7,10 +7,19 @@
     <title>Recipe Creation Page</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"> <!-- Bulma CSS Framework -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/override.css">
     <style>
         .custom-navbar {
-            background-color: #bb5374; /* Faded Cranberry */
+            background-color: #bb5374; 
             border-bottom: 2px solid black; 
+        }
+        .navbar-item {
+            color: #16021f; 
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .navbar-item:hover {
+            background-color: #f0b45f; 
+            color: black;
         }
     </style>
 </head>
@@ -56,6 +65,14 @@
                         </div>
                     </div>
 
+                    <!-- Add photo -->
+                    <div class="field">
+                        <label class="label">Upload Recipe Photo</label>
+                        <div class="control">
+                            <input class="input" type="file" id="recipe-photo" accept="image/*">
+                        </div>
+                    </div>
+
                     <!-- Save Button -->
                     <div class="control has-text-centered">
                         <button type="submit" class="button is-warning">Save Recipe</button>
@@ -67,6 +84,7 @@
 
     <!-- JavaScript -->
     <script src="assets/js/recipe-creation.js"></script>
+    <script src="assets/js/toggle.js"></script>
 </body>
 
 </html>
