@@ -1,9 +1,4 @@
-html,
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
+ /*Custom CSS (Override Bulma)*/     /* This is where you can add overrides for specific elements on your page without having to change the settings across the entire website (I think) */
 
 /*Background Gradient*/    /* Some of the colors are commented out because they didb't work with the gradient, but I left them here for easy access to refence when changing colors of other elements */
 body {
@@ -393,3 +388,9 @@ body {
     background-color: #fed7a7; /* Pastel Yellow-Orange */
   }
   
+    html,
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
