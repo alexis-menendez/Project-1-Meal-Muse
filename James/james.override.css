@@ -1,0 +1,223 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(
+    120deg, 
+    #ffdeb7,
+    #fed7a7,
+    #ffb085,
+    #ed7c74,
+    #e96b74,
+    #d35f74,
+    #bb5374,
+    #ba5374,
+    #a34874,
+    #75485f,
+    #603956,
+    #5c2576
+      );
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: cover;
+}
+
+.navbar-item {
+  color: #16021f;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-item:hover {
+  background-color: #f0b45f;
+  color: black;
+}
+
+.input, .textarea {
+  background-color: #ffe9dd;
+  color: #16021f;
+  border-color: #f8b693;
+}
+
+.input::placeholder, .textarea::placeholder {
+  color: #a48b97;
+}
+
+.input:focus, .textarea:focus {
+  border-color: #f0b45f;
+  box-shadow: 0 0 5px rgba(240, 180, 95, 0.5);
+}
+
+.custom-navbar {
+  background-color: #bb5374;
+  border-bottom: 2px solid black;
+}
+
+.calendar-container {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 20px;
+  padding: 40px;
+}
+
+.calendar-main {
+  padding: 80px;
+  display: flex;
+  align-items: stretch;
+  gap: 50px;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.calendar-pane {
+  flex: 2;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.calendar-header button {
+  margin: 0 10px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1;
+  position: relative;
+  top: -3px;
+  cursor: pointer;
+  padding: 0.2rem 0.rem;
+}
+
+table.calendar-meal, .calendar-meal {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.calendar-meal thead th {
+  background-color: #e2e2e2;
+  color: #333;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+}
+
+.calendar-meal td, .calendar-meal th,
+table.calendar-meal td, table.calendar-meal th {
+  width: 14.2857%;
+  min-height: 80px;
+  vertical-align: top;
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+.calendar-meal td {
+  border: 1px solid #eee;
+  text-align: right;
+  height: calc(100vh / 7);
+}
+
+.calendar-dayNumber {
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 3px;
+  display: block;
+}
+
+.calendar-rightPane {
+  flex: 1;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  height: 600px;
+}
+
+.calendar-scrollBox {
+  flex: 1;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  margin: 10px 0;
+  padding: 10px;
+  min-height: 0;
+  width: 100%;
+}
+
+.calendar-scrollBtn {
+  background-color: #3273dc;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  margin: 5px 0;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.calendar-scrollBtn:hover {
+  background-color: #4a8af4;
+}
+
+#notesList li[draggable="true"] {
+  cursor: move;
+}
+
+.calendar-meal td.drag-over {
+  background-color: #f0f0f0; 
+  border: 2px dashed #3273dc;
+}
+
+.calendar-meal td .recipe-item {
+  display: block;
+  background-color: #eee;
+  margin: 2px 0;
+  padding: 4px;
+  border-radius: 3px;
+  font-size: 0.9rem;
+}
+
+#notesList li {
+  list-style-type: none;
+  background-color: #f8f8f8;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  font-weight: 600;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.calendar-scrollBox h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.calendar-recipe {
+  background-color: #faf3b3;
+  margin-top: 5px;
+  padding: 3px 5px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+
+.calendar-recipe:hover {
+  background-color: #f7e570;
+}
