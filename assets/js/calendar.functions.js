@@ -1,89 +1,165 @@
-// basic calendar functionalities. pulled from geeksforgeeks.com
-// just to test it out.
-let date = new Date();
-let year = date.getFullYear();
-let month = date.getMonth();
-
-const day = document.querySelector(".calendar-dates");
-const currdate = document.querySelector(".calendar-current-date");
-const calnav = document.querySelectorAll(".calendar-navigation span");
-
-// Array of month names
-const months = [
-    "January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"
-];
-
-// Function to generate the calendar
-const theCalendar = () => {
-    // Get the first day of the month
-    let dayone = new Date(year, month, 1).getDay();
-
-    // Get the last date of the month
-    let lastdate = new Date(year, month + 1, 0).getDate();
-
-    // Get the day of the last date of the month
-    let dayend = new Date(year, month, lastdate).getDay();
-
-    // Get the last date of the previous month
-    let monthlastdate = new Date(year, month, 0).getDate();
-
-    // Variable to store the generated calendar HTML
-    let lit = "";
-
-    // Loop to add the last dates of the previous month
-    for (let i = dayone; i > 0; i--) {
-        lit += `<div class="inactive">${monthlastdate - i + 1}</div>`;
-    }
-
-    // Loop to add the dates of the current month
-    for (let i = 1; i <= lastdate; i++) {
-        // Check if the current date is today
-        let isToday = i === date.getDate()
-            && month === new Date().getMonth()
-            && year === new Date().getFullYear()
-            ? "active"
-            : "";
-        lit += `<div class="date ${isToday}" data-date="${i}">${i}</div>`;
-    }
-
-    // Loop to add the first dates of the next month
-    for (let i = dayend; i < 6; i++) {
-        lit += `<div class="inactive">${i - dayend + 1}</div>`;
-    }
-
-    // Set the inner HTML of the calendar dates
-    day.innerHTML = lit;
-
-    // Set current date
-    currdate.innerHTML = `${months[month]} ${year}`;
-
-    // Add event listeners to each date
-    document.querySelectorAll('.date').forEach(dateElement => {
-        dateElement.addEventListener('click', (e) => {
-            document.querySelectorAll('.date').forEach(el => el.classList.remove('selected'));
-            e.target.classList.add('selected');
-            console.log(`Selected date: ${e.target.dataset.date} ${months[month]} ${year}`);
-        });
+document.addEventListener('DOMContentLoaded', function() {
+    // load recipes from local storage
+    let storedRecipes = JSON.parse(localStorage.getItem('recipes')) || [];
+    const notesList = document.getElementById('notesList');
+    notesList.innerHTML = '';
+  
+    storedRecipes.forEach(recipe => {
+      const li = document.createElement('li');
+      li.draggable = true;
+      li.textContent = recipe.name;
+      notesList.appendChild(li);
     });
-};
-
-// Call the function to generate the calendar
-theCalendar();
-
-// Attach a click event listener to each icon
-calnav.forEach(icon => {
-    icon.addEventListener("click", () => {
-        month = icon.id === "calendar-prev" ? month - 1 : month + 1;
-
-        if (month < 0 || month > 11) {
-            date = new Date(year, month, new Date().getDate());
-            year = date.getFullYear();
-            month = date.getMonth();
-        } else {
-            date = new Date();
+  
+    // make them draggable
+    const recipeItems = document.querySelectorAll('#notesList li[draggable="true"]');
+    recipeItems.forEach(item => {
+      item.addEventListener('dragstart', (e) => {
+        e.dataTransfer.setData('text/plain', item.innerText);
+      });
+    });
+  
+    // calendar data
+    let calendarData = JSON.parse(localStorage.getItem('calendarData')) || {};
+  
+    function saveCalendarData() {
+      localStorage.setItem('calendarData', JSON.stringify(calendarData));
+    }
+  
+    // month/year
+    const monthNames = [
+      "January", "February", "March", "April", "May", "June",
+      "July", "August", "September", "October", "November", "December"
+    ];
+  
+    let currentMonth = 0; // 0=january
+    let currentYear = 2025;
+  
+    // grab references to your html elements
+    const calendarTitle = document.getElementById('calendarTitle');
+    const prevMonthBtn = document.getElementById('prevMonthBtn');
+    const nextMonthBtn = document.getElementById('nextMonthBtn');
+    const calendarBody = document.getElementById('calendarBody');
+  
+    // rendering the calendar
+    function renderCalendar() {
+      calendarBody.innerHTML = '';
+  
+      calendarTitle.textContent = `${monthNames[currentMonth]} ${currentYear} Meal Calendar`;
+  
+      const firstDayOfMonth = new Date(currentYear, currentMonth, 1);
+      const lastDayOfMonth = new Date(currentYear, currentMonth + 1, 0);
+      const numDays = lastDayOfMonth.getDate();
+  
+      const startDay = firstDayOfMonth.getDay();
+  
+      let dayCounter = 1;
+      let done = false;
+  
+      while (!done) {
+        const row = document.createElement('tr');
+  
+        for (let weekday = 0; weekday < 7; weekday++) {
+          const cell = document.createElement('td');
+  
+          if ((dayCounter === 1 && weekday < startDay) || dayCounter > numDays) {
+            cell.innerHTML = '<span class="calendar-dayNumber"></span>';
+          } else {
+            const dayNumber = dayCounter;
+            cell.innerHTML = `<span class="calendar-dayNumber">${dayNumber}</span>`;
+  
+            const m = String(currentMonth + 1).padStart(2, '0');
+            const d = String(dayNumber).padStart(2, '0');
+            const dateKey = `${currentYear}-${m}-${d}`;
+  
+            if (calendarData[dateKey]) {
+              calendarData[dateKey].forEach(recipeName => {
+                const recipeDiv = createRecipeDiv(recipeName, dateKey);
+                cell.appendChild(recipeDiv);
+              });
+            }
+            enableDropOnCell(cell, dateKey);
+  
+            dayCounter++;
+          }
+          row.appendChild(cell);
+  
+          if (dayCounter > numDays) {
+            done = true;
+          }
         }
-
-        theCalendar();
+        calendarBody.appendChild(row);
+      }
+    }
+  
+    // drag & drop
+    function enableDropOnCell(cell, dateKey) {
+      cell.addEventListener('dragover', (e) => {
+        e.preventDefault();
+      });
+  
+      cell.addEventListener('drop', (e) => {
+        e.preventDefault();
+        const recipeName = e.dataTransfer.getData('text/plain');
+  
+        if (!calendarData[dateKey]) {
+          calendarData[dateKey] = [];
+        }
+        calendarData[dateKey].push(recipeName);
+        saveCalendarData();
+  
+        const recipeDiv = createRecipeDiv(recipeName, dateKey);
+        cell.appendChild(recipeDiv);
+      });
+    }
+  
+    function createRecipeDiv(recipeName, dateKey) {
+      const recipeDiv = document.createElement('div');
+      recipeDiv.classList.add('calendar-recipe');
+      recipeDiv.textContent = recipeName;
+  
+      recipeDiv.addEventListener('click', () => {
+        if (confirm(`Remove "${recipeName}"?`)) {
+          // remove from dom
+          recipeDiv.remove();
+  
+          // remove from calendardata
+          calendarData[dateKey] = calendarData[dateKey].filter(r => r !== recipeName);
+          saveCalendarData();
+        }
+      });
+      return recipeDiv;
+    }
+  
+    // next/prev buttons
+    prevMonthBtn.addEventListener('click', () => {
+      if (currentMonth > 0) {
+        currentMonth--;
+        renderCalendar();
+      }
     });
-});
+  
+    nextMonthBtn.addEventListener('click', () => {
+      if (currentMonth < 11) {
+        currentMonth++;
+        renderCalendar();
+      }
+    });
+  
+    // scrolling buttons
+    const scrollUpBtn = document.getElementById('scrollUpBtn');
+    const scrollDownBtn = document.getElementById('scrollDownBtn');
+    const scrollBox = document.querySelector('.calendar-scrollBox');
+  
+    scrollUpBtn.addEventListener('click', () => {
+      scrollBox.scrollTop -= 50;
+    });
+  
+    scrollDownBtn.addEventListener('click', () => {
+      scrollBox.scrollTop += 50;
+    });
+  
+    // initial render
+    renderCalendar();
+  });
+  
