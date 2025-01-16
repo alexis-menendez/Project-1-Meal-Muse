@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylesheet Preview</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/override.css">
+    <style>
+        .custom-navbar { /* This is part of the navbar, but there is also bulma css in the stylesheet that it needs */
+            background-color: #bb5374; /* Faded Cranberry */
+            border-bottom: 2px solid black;
+        }
+        .navbar-item {
+            color: #16021f; /* Very Dark Plum */
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .navbar-item:hover {
+            background-color: #f0b45f; /* Warm Yellow-Orange Hue */
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar --> 
+    <nav class="navbar custom-navbar">
+        <div class="navbar-brand">
+            <a class="navbar-item is-active" href="index.html">Meal Muse</a>
+            <a class="navbar-item" href="calendar.html">Calendar</a>
+            <a class="navbar-item" href="recipe-library.html">Recipe Library</a>
+            <a class="navbar-item" href="recipe-creation.html">Add Recipe</a>
+        </div>
+    </nav>
+<main>
+<div class="section">
+  <div class="container">
+    <div class="box" style="max-width: 1365px; justify-content: center; text-align: center;">
+      <h1 class="title">Recipe Of The Day!</h1>
+    </div>
+  </div>
+</div>
+    <div class="section">
+      <div class="container">
+      <div class="columns" style="justify-content: space-between;">
+      <div class="box" style="max-width: 350px; max-height: 200px;" >
+        <p><a href="https://www.allrecipes.com/" target="_blank">
+          <img src="pictures-landing/all-recipes.png" alt="allrecipes.com" style="height: 162px; width: 311px; align-items: center;">
+          </a></p>
+      </div>
+      <div class="box" style="max-width: 350px; max-height: 200px;">
+        <p><a href="https://www.simplyrecipes.com/" target="_blank">
+          <img src="pictures-landing/simplyrecipes.jpg" alt="simplyrecipes.com" style="height: 162px; width: 311px; align-items: center;">
+          </a></p>
+      </div>
+      <div class="box" style="max-width: 350px; max-height: 200px;">
+        <p><a href="https://www.foodnetwork.com/" target="_blank">
+          <img src="pictures-landing/food-network.jpg" alt="foodnetwork.com" style="height: 162px; width: 311px; align-items: center;" >
+          </a></p>
+      </div>
+      </div>
+      </div>
+    </div>
+</main>
+<footer>
+<div class="section">
+<div class="container" style="text-align: center; max-width: 1365px;">
+  <div class="box">
+    <img src="pictures-landing/about-us.jpg" alt="about us header">
+    <p>Welcome to Meal Muse, your ultimate online destination for discovering and sharing delicious recipes from around the world! Whether you're a seasoned chef or just starting your culinary journey, we're here to inspire, teach, and help you create mouthwatering meals that everyone will love. Our mission is simple, to make cooking easy, enjoyable, and accessible for everyone. We believe that food is more than just sustenance, it's a way to connect, celebrate, and create memories. That's why we've curated a diverse collection of recipes, from everyday favorites to unique dishes. We can't wait for you to dive into the world of flavors, textures, and cooking techniques we've curated. Whether you're preparing a weeknight dinner, planning a special meal, or exploring new cuisines, we're here to support you every step of the way.</p>
+  </div>
+</div>
+</div>
+</footer>
+</body>
+</html>
