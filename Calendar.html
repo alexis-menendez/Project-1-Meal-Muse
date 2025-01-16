@@ -21,7 +21,6 @@
             background-color: #f0b45f; 
             color: black;
         }
-
     </style>
 </head>
 
@@ -44,62 +43,42 @@
 
     </header>
 
-calendar
-    <div class="container">
-        <div class="calendarPane">
-            <h1>January 2025 Meal Calendar</h1>
-            <div class="calendar">
-                <div class="calendar-current-date"></div>
-                <div class="calendar-navigation">
-                    <span id="calendar-prev">Previous</span>
-                    <span id="calendar-next">Next</span>
-                </div>
-                <div class="calendar-dates"></div>
-            </div>
-        </div>
-        
-        <div class="rightPane">
-            <button class="scrollBtn">Scroll Up</button>
-            <div class="scrollBox">
-                <h2>Recipes/Notes</h2>
-                <p>
-                    This section could hold a list of recipes for each selected day, 
-                    or general notes. Without JavaScript, it won’t scroll automatically.
-                </p>
-                <ul id="notesList">
-                    <li>Sample Recipe 1</li>
-                    <li>Sample Recipe 2</li>
-                    <li>Another idea...</li>
-                </ul>
-            </div>
-            <button class="scrollBtn">Scroll Down</button>
-        </div>
-    </div>
-
-    <script src="assets/js/recipe-creation.js"></script>
-    <script src="assets/js/calendar.functions.js"></script>
-</body>
-<
+    <div class="calendar-container">
+        <div class="calendar-pane">
+          <div class="calendar-header">
+            <button id="prevMonthBtn">&lt;</button>
+            <h1 id="calendarTitle">January 2025 Meal Calendar</h1>
+            <button id="nextMonthBtn">&gt;</button>
+          </div>
     
-    <div class="rightPane">
-      <button class="scrollBtn">Scroll Up</button>
-      <div class="scrollBox">
-        <h2>Recipes/Notes</h2>
-        <p>
-          This section could hold a list of recipes for each selected day, 
-          or general notes. Without JavaScript, it won’t scroll automatically.
-        </p>
-        <ul id="notesList">
-          <li>Sample Recipe 1</li>
-          <li>Sample Recipe 2</li>
-          <li>Another idea...</li>
-        </ul>
+          <table class="calendar-meal" id="mealCalendar">
+            <thead>
+              <tr>
+                <th>Sun</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+              </tr>
+            </thead>
+            <tbody id="calendarBody">
+            </tbody>
+          </table>
+        </div>
+    
+        <div class="calendar-rightPane">
+          <button class="calendar-scrollBtn" id="scrollUpBtn">Scroll Up</button>
+          <div class="calendar-scrollBox">
+            <h2>Recipes</h2>
+            <ul id="notesList"></ul>
+          </div>
+          <button class="calendar-scrollBtn" id="scrollDownBtn">Scroll Down</button>
+        </div>
       </div>
-      <button class="scrollBtn">Scroll Down</button>
-    </div>
-
-  </div>
-  <script src="assets/js/calendar.functions.js"></script>
+    
+      <script src="assets/js/calendar.functions.js"></script>
   <script src="assets/js/toggle.js"></script>
 </body>
 </html>
