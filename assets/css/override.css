@@ -391,3 +391,23 @@ body.tie-dye-dark h5,
 body.tie-dye-dark h6 {
   color: #ffffff; /* Change this to your desired heading color */
 }
+
+
+/*recipe library classes.
+first class for titles. - Hunter*/
+.recipeLibraryName{
+  text-align: center;
+  text-transform: capitalize;
+}
+/* unordered list class for recipe library page - Hunter*/
+.recipeLibraryIngredients{
+list-style-type: disc;
+font-size: larger;
+font-weight: 500;
+text-transform: capitalize;
+}
+
+/*p tag for recipe steps page. - Hunter*/
+.recipeLibrarySteps{
+  font-size: large;
+}

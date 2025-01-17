@@ -16,9 +16,14 @@ parsedRecipe.forEach((recipe, index) => {
     divItem.classList.add('box');
 //Created element named recipeName 
     const recipeName = document.createElement('p');
+    recipeName.classList.add('title');
+    recipeName.classList.add('recipeLibraryName');
     recipeName.innerHTML = `${recipe.name}`;
 //Created element named ingredientsList
     const ingredientsList = document.createElement('ul');
+    ingredientsList.classList.add('recipeLibraryIngredients');
+    ingredientsList.classList.add('content');
+    ingredientsList.classList.add('box');
 
     recipe.ingredients.forEach((ingredient, index) => {
     const ingitem = document.createElement('li');
@@ -28,6 +33,7 @@ parsedRecipe.forEach((recipe, index) => {
 
     //creating element for steps step
     const steps = document.createElement('p');
+    steps.classList.add('recipeLibrarySteps')
     steps.innerHTML = recipe.steps[0];
 
     // appending to divitem 
