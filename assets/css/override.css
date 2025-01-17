@@ -72,7 +72,7 @@ body {
   cursor: url('..assets/cursor/Bread.cur'), auto;
 }
 
-.calendarTitle {
+#calendarTitle {
   font-size: 80px
 }
 
