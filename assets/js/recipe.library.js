@@ -21,9 +21,6 @@ parsedRecipe.forEach((recipe, index) => {
     recipeName.classList.add('recipeLibraryName');
     recipeName.innerHTML = `${recipe.name}`;
 
-    const recipePic = atob(parsedRecipe, 'photo');
-    
-
 //Seperate ingredient section
     const ingSection = document.createElement('h2');
     ingSection.classList.add('recipeLibraryIngredients');
