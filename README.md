@@ -27,6 +27,8 @@ Meal Muse is a meal planning website to help combat meal planning fatigue. We of
 1. Working internet
 2. Hunger
 3. the ability to tolerate cooking
+4. Willingness to attempt cooking
+5. Actually putting repieces in the libary. 
 
 
 ### Installing + Executing
@@ -35,7 +37,7 @@ Meal Muse is a meal planning website to help combat meal planning fatigue. We of
 
                     OR
 
-* click on it. 
+* click on the link in DEPLOYMENT.
 
 ##  Deployment
 
@@ -45,6 +47,9 @@ You access this website through the link provided below.
     Release: 1/16/2025
     Development: We are always looking for ways to improve and add new features! 
    
+## Usage
+
+Meal Muse is an application in order to store your preferred recipies and add them to a calendar for meal planning purposes. 
 
 ### Branches
 
@@ -66,6 +71,16 @@ Landing
 
  Testing
  * debugging the repo as a whole.
+
+## Future Development Goals
+* Label meals: Breakfast,  Lunch, Dinner, Desert, Snack, etc. 
+* Create sections for each label
+* Ability to add picture of recipie
+* Generating recipies based on inputted ingredients.
+* Possible expanion into grocery shopping lists and mindfulness applications surrounding food.
+* User generate and submission of cooking videos hosted on MM.
+* About/Contact & FAQ pages for simple trouble shooting.
+Forum/recipie exchange page.
 
 ##  Additional Documentation and Acknowledgments
 

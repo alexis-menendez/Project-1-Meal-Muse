@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"> <!-- Bulma CSS Framework -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/override.css">
+    <!-- CDN example (jsDelivr) -->
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <style>
         .custom-navbar {
             background-color: #bb5374; 
@@ -28,16 +30,18 @@
   <header>  <!-- Navigation Bar -->
     <nav class="navbar custom-navbar">
         <div class="navbar-brand">
+            <a class="navbar-item" href="index.html">Meal Muse</a>
+            <a class="navbar-item" href="Calendar.html">Calendar</a>
+            <a class="navbar-item" href="recipe-library.html">Recipe Library</a>
+            <a class="navbar-item" href="recipe-creation.html">Add Recipe</a>
+        </div>
+        <div class="toggles">
             <button id="toggle-button">⚪</button>
             <button id="toggle-light">⚪</button>
             <button id="mood1-hunter">🌞</button>
             <button id="mood2-nicholas">🌙</button>
             <button id="mood3-jameson">🌈</button>
             <button id="mood4-alexis">🌵</button>
-            <a class="navbar-item" href="index.html">Meal Muse</a>
-            <a class="navbar-item" href="Calendar.html">Calendar</a>
-            <a class="navbar-item" href="recipe-library.html">Recipe Library</a>
-            <a class="navbar-item" href="recipe-creation.html">Add Recipe</a>
         </div>
     </nav>
 
@@ -79,7 +83,6 @@
       </div>
     
       <script src="assets/js/calendar.functions.js"></script>
-  <script src="assets/js/toggle.js"></script>
+      <script src="assets/js/toggle.js"></script>
 </body>
 </html>
-main
