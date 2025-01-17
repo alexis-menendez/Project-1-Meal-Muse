@@ -67,6 +67,15 @@
     padding: 40px;
   }
   
+/* Apply custom cursor to the entire body */
+body {
+  cursor: url('..assets/cursor/Bread.cur'), auto;
+}
+
+.calendarTitle {
+  font-size: 80px
+}
+
   .calendar-main {
     padding: 80px;
     display: flex;
@@ -81,7 +90,7 @@
     margin-right: 20px;
     display: flex;
     flex-direction: column;
-    background-color: #ffffff;
+    background-color: #ffffff2f;
     border: 2px solid #ccc;
     border-radius: 8px;
     padding: 1rem;
@@ -96,7 +105,7 @@
   
   .calendar-header button {
     margin: 0 10px;
-    font-size: 1.8rem;
+    font-size: 80px;
     font-weight: bold;
     line-height: 1;
     position: relative;
@@ -110,10 +119,11 @@
     border-collapse: collapse;
     text-align: center;
     border: 1px solid #ccc;
+    background-color: #ed7c7436;
   }
   
   .calendar-meal thead th {
-    background-color: #e2e2e2;
+    background-color: #e2e2e221;
     color: #333;
     padding: 0.75rem;
     border: 1px solid #ccc;
@@ -143,7 +153,7 @@
   
   .calendar-rightPane {
     flex: 1;
-    background-color: #fff;
+    background-color: #ffffff57;
     border: 2px solid #ccc;
     border-radius: 8px;
     display: flex;
@@ -197,7 +207,7 @@
   
   #notesList li {
     list-style-type: none;
-    background-color: #f8f8f8;
+    background-color: #f8f8f8b6;
     margin: 0.5rem 0;
     padding: 0.5rem;
     font-weight: 600;
@@ -214,7 +224,8 @@
   }
   
   .calendar-recipe {
-    background-color: #d35f74;
+    background-color: #603956;
+    color: #fff;
     margin-top: 5px;
     padding: 3px 5px;
     border-radius: 4px;
