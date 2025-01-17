@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function renderCalendar() {
       calendarBody.innerHTML = '';
   
-      calendarTitle.textContent = `${monthNames[currentMonth]} ${currentYear} Meal Calendar`;
+      calendarTitle.textContent = `${monthNames[currentMonth]} ${currentYear}`;
   
       const firstDayOfMonth = new Date(currentYear, currentMonth, 1);
       const lastDayOfMonth = new Date(currentYear, currentMonth + 1, 0);
