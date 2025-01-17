@@ -416,9 +416,14 @@ list-style-type: disc;
 font-size: larger;
 font-weight: 500;
 text-transform: capitalize;
+margin-left: 1%;
 }
 
 /*p tag for recipe steps page. - Hunter*/
 .recipeLibrarySteps{
-  font-size: large;
+  
+  font-size: larger;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-left: 2%;
 }
