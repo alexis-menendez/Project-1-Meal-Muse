@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stylesheet Preview</title>
+    <title>Meal Muse</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/override.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/override.css">
+    <script defer type="text/javascript" src="./assets/js/recipe.library.js"></script>
+    <script defer type="text/javascript" src="./assets/js/home-page.js"></script>
     <style>
         .custom-navbar { /* This is part of the navbar, but there is also bulma css in the stylesheet that it needs */
             background-color: #bb5374; 
@@ -35,9 +37,16 @@
 <main>
 <div class="section">
   <div class="container">
-    <div class="box" style="max-width: 1365px; justify-content: center; text-align: center;">
+    <div class="box" id="day-recipe" style="max-width: 1365px; justify-content: center; text-align: center;">
       <h1 class="title">Recipe Of The Day!</h1>
     </div>
+  </div>
+</div>
+<div class="section">
+  <div class="container" style="max-width: 300px; justify-content: center;">
+   <div class="box">
+    <h1 class="title" style="text-align: center;">Click on recources below</h1>
+   </div>
   </div>
 </div>
     <div class="section">
@@ -66,7 +75,7 @@
 <div class="section">
 <div class="container" style="text-align: center; max-width: 1365px;">
   <div class="box">
-    <img src="pictures-landing/about-us.jpg" alt="about us header">
+    <h1 class="title">About Us</h1>
     <p>Welcome to Meal Muse, your ultimate online destination for discovering and sharing delicious recipes from around the world! Whether you're a seasoned chef or just starting your culinary journey, we're here to inspire, teach, and help you create mouthwatering meals that everyone will love. Our mission is simple, to make cooking easy, enjoyable, and accessible for everyone. We believe that food is more than just sustenance, it's a way to connect, celebrate, and create memories. That's why we've curated a diverse collection of recipes, from everyday favorites to unique dishes. We can't wait for you to dive into the world of flavors, textures, and cooking techniques we've curated. Whether you're preparing a weeknight dinner, planning a special meal, or exploring new cuisines, we're here to support you every step of the way.</p>
   </div>
 </div>
