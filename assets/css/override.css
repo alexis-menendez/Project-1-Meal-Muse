@@ -36,7 +36,20 @@
   .navbar-item:hover {
     background-color: #f0b45f;  
     color: black;
+    cursor: url('../images/cursor/knife3.png'), auto;
+    
   }
+
+
+
+.toggles {
+  padding: 15px 20px;
+  cursor: url('../images/cursor/knife3.png'), auto;
+}
+
+.toggles:hover {
+ cursor: url('../images/cursor/Bread.png'), auto;
+}
 
 /*text input boxes*/
   .input, .textarea {
@@ -58,13 +71,20 @@
   .custom-navbar {
     background-color: #bb5374;
     border-bottom: 2px solid black;
+    justify-content: space-between;
+    cursor: url('../images/cursor/knife3.png'), auto;
   }
   
+.cursorStuff {
+  cursor: url('../images/cursor/knife3.png'), auto;
+}
+
   .calendar-container {
     display: flex;
     align-items: flex-start;
     margin-top: 20px;
     padding: 40px;
+    cursor: url('../images/cursor/knife3.png'), auto;
   }
   
 /* Apply custom cursor to the entire body */

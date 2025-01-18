@@ -1,3 +1,26 @@
+// Formated Date code using the DayJS library
+let currentDay = dayjs().date()
+console.log("Date: ", currentDay);
+
+// Standard JS Date code
+const today = new Date();
+const day = today.getDate();
+console.log("day: ", day);
+
+function highlightCurrentDay() {
+
+    const highlight = document.querySelectorAll('.calendar-dayNumber');
+    console.log("Days Array: ", highlight);
+
+    for (let i = 0; i < highlight.length; i++) {
+        if (highlight[i].innerHTML == day) {
+    //    if (highlight[i].textContent == day) {
+            highlight[i].parentElement.style.background = "#ffb085";
+        }
+    }
+}
+
+
 document.addEventListener('DOMContentLoaded', function() {
     // load recipes from local storage
     let storedRecipes = JSON.parse(localStorage.getItem('recipes')) || [];
@@ -90,6 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         calendarBody.appendChild(row);
       }
+      highlightCurrentDay();
     }
   
     // drag & drop
