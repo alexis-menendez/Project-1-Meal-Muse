@@ -317,6 +317,9 @@ body {
   /* Add your CSS rules here */
   body {
     background-color: rgb(0, 191, 255);
+    .calendar-container {
+      flex-direction: column;
+    }
   }
 }
 
@@ -325,6 +328,9 @@ body {
   /* Add your CSS rules here */
   body {
     background-color: rgb(157, 0, 255);
+    .calendar-container {
+      flex-direction: column;
+    }
   }
 }
 
@@ -333,6 +339,9 @@ body {
   /* Add your CSS rules here */
   body {
     background-color: rgb(255, 0, 119);
+    .calendar-container {
+      flex-direction: column;
+    }
   }
 }
 
