@@ -42,6 +42,11 @@
     overflow: hidden;  
   }
 
+.navbar-item {   /* Increase font size for navbar items - Alexis */
+  font-size: 1.5rem;  /* Adjust font size as needed (e.g., 1.2rem, 2rem, etc.) */
+  font-weight: bold;  /* Optionally make the text bold */
+}
+
   .custom-navbar {
     background-color: #bb5374;
     border-bottom: 2px solid black;
