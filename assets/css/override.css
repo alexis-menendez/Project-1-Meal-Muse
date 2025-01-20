@@ -32,6 +32,21 @@
     
   }
 
+  .navbar-logo { /* Makes the navbar logo scales proportionally and aligns properly - Alexis */
+    max-height: 100px; 
+    height: 100px;    
+    width: auto;      
+    display: block;  
+    object-fit: contain; /* Avoid stretching */
+    border-radius: 50%; /* Makes the image circular */
+    overflow: hidden;  
+  }
+
+.navbar-item {   /* Increase font size for navbar items - Alexis */
+  font-size: 1.5rem;  /* Adjust font size as needed (e.g., 1.2rem, 2rem, etc.) */
+  font-weight: bold;  /* Optionally make the text bold */
+}
+
   .custom-navbar {
     background-color: #bb5374;
     border-bottom: 2px solid black;
@@ -57,7 +72,7 @@
   
 /* Apply custom cursor to the entire body -Constance */
 body {
-  cursor: url('..assets/cursor/Bread.cur'), auto;
+  cursor: url('..assets/cursor/knife3.cur'), auto;
 }
 
 .cursorStuff {
@@ -70,7 +85,7 @@ body {
 }
 
 .toggles:hover {
- cursor: url('../images/cursor/Bread.png'), auto;
+ cursor: url('../images/cursor/knife3.png'), auto;
 }
 
 /* Calendar stuff -James */
@@ -248,6 +263,14 @@ body {
   }
   
 /* Toggle mode styles -Constance */
+
+.toggles button img { /* Constance, I added this part to your toggle code to make the image circular and adjust thier size */
+  border-radius: 50%; 
+  width: 25px;  
+  height: 25px; 
+  object-fit: cover; 
+}
+
 body.tie-dye-dark {
   background: radial-gradient(circle, #0d0061, #85003a, #02526f);
   color: #ffffff;
@@ -335,6 +358,47 @@ body.tie-dye-dark h6 {
   color: #ffffff; 
 }
 
+/*space and tie dye animation theme toggles - Alexis*/
+body.mood5-tiedyeanimation {
+  background: url('assets/images/toggle/animations/tiedyeanimation.crdownload') no-repeat center center fixed;
+  background-size: cover;
+  color: #ffffff;
+}
+
+body.tie-dye-dark {
+  background: url('assets/images/toggle/animations/tiedyeanimation.crdownload') no-repeat center center fixed;
+  background-size: cover;
+}
+
+body.tie-dye-dark h1,
+body.tie-dye-dark h2,
+body.tie-dye-dark h3,
+body.tie-dye-dark h4,
+body.tie-dye-dark h5,
+body.tie-dye-dark h6 {
+  color: #ffffff; 
+}
+
+body.mood6-spaceanimation {
+  background: url('assets/images/toggle/animations/spaceanimation.crdownload') no-repeat center center fixed;
+  background-size: cover;
+  color: #ffffff;
+}
+
+body.tie-dye-dark {
+  background: url('assets/images/toggle/animations/spaceanimation.crdownload') no-repeat center center fixed;
+  background-size: cover;
+}
+
+body.tie-dye-dark h1,
+body.tie-dye-dark h2,
+body.tie-dye-dark h3,
+body.tie-dye-dark h4,
+body.tie-dye-dark h5,
+body.tie-dye-dark h6 {
+  color: #ffffff; 
+}
+
 
 /*recipe library classes.
 first class for titles. - Hunter*/
@@ -361,7 +425,7 @@ margin-left: 1%;
 }
 
 
-  /* Calendar Styles that Constance made (commented out since we are using James) */
+/* Calendar Styles that Constance made (commented out since we are using James) */
 /* .calendar {
   display: flex;
   flex-direction: column;
@@ -412,8 +476,8 @@ margin-left: 1%;
   color: white;
 } */
 
-/* Media Queries - Constance */
 
+/* Media Queries - Constance */
 /* Small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   /* Add your CSS rules here */
@@ -442,7 +506,7 @@ margin-left: 1%;
   body {
     background-color: rgb(255, 0, 119);
     .calendar-container {
-      flex-direction: column;
+   
     }
   }
 }
