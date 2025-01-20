@@ -1,35 +1,27 @@
- /*Custom CSS (Override Bulma)*/     /* This is where you can add overrides for specific elements on your page without having to change the settings across the entire website (I think) */
+ /*Custom CSS (Override Bulma)*/     /* This is where you can add overrides for specific elements on your page without having to change the settings across the entire website (I think) - Alexis */
 
-/*Background Gradient*/    /* Some of the colors are commented out because they didb't work with the gradient, but I left them here for easy access to refence when changing colors of other elements */
+/*Background Gradient - Alexis*/ 
   body {
     background: linear-gradient(
         120deg, 
         #ffdeb7,  /* Light Buttermilk */
-       /* #ffcd8f,  /* Soft Honey Gold */           /* I took Soft Honey Gold out because it was too orange/light for the gradient */
         #fed7a7,  /* Pastel Yellow-Orange */
-       /* #f0b45f,  /* Warm Yellow-Orange Hue */    /* I took Warm Yellow-Orange Hue out because it was too dark for the gradient */
         #ffb085,  /* Peachy Orange */
-       /* #f9af72,  /* Apricot Glow */              /* I took Warm Apricot Glow out because it was too orange for the gradient */
-       /* #f59b71,  /* Warm Peach */                /* I took Warm Peach out because it was too dark for the gradient */
         #ed7c74,  /* Warm Blush */
-       /* #a33322,  /* Warm Coral Red-Orange */     /* I took Warm Coral Red-Orange out because it was too dark for the gradient */
-       /* #91242b,  /* Vibrant Crimson Red */       /* I took Vibrant Crimson Red out because it was too dark for the gradient */
         #e96b74,  /* Coral Pink */
         #d35f74,  /* Cherry Blossom */
         #bb5374,  /* Faded Cranberry */
         #ba5374,  /* Rosy Red */
         #a34874,  /* Rosewood Mauve */
         #75485f,  /* Muted Purple-Pink */
-       /* #503c5b,  /* Muted Dark Purple */         /* I took Muted Dark Purple out because it was too dark for the gradient */
         #603956,  /* Rich Plum */
-       /* #702e75,  /* Dusky Violet */              /* I took Dusky Violet out because it was too dark for the gradient */
         #5c2576  /* Deep Plum */
         );
   }
 
-/*navbar*/
+/*navbar - Alexis*/
   .navbar-item {
-  color: #16021f;  /* Very Dark Plum */
+  color: #16021f; 
   transition: background-color 0.3s ease, color 0.3s ease;
   }
 
@@ -40,18 +32,14 @@
     
   }
 
+  .custom-navbar {
+    background-color: #bb5374;
+    border-bottom: 2px solid black;
+    justify-content: space-between;
+    cursor: url('../images/cursor/knife3.png'), auto;
+  }
 
-
-.toggles {
-  padding: 15px 20px;
-  cursor: url('../images/cursor/knife3.png'), auto;
-}
-
-.toggles:hover {
- cursor: url('../images/cursor/Bread.png'), auto;
-}
-
-/*text input boxes*/
+/*recipe creation page text input boxes - Alexis*/
   .input, .textarea {
     background-color: #ffe9dd; 
     color: #16021f; 
@@ -66,30 +54,32 @@
     border-color: #f0b45f; 
     box-shadow: 0 0 5px rgba(240, 180, 95, 0.5); 
   }
-
-
-  .custom-navbar {
-    background-color: #bb5374;
-    border-bottom: 2px solid black;
-    justify-content: space-between;
-    cursor: url('../images/cursor/knife3.png'), auto;
-  }
   
+/* Apply custom cursor to the entire body -Constance */
+body {
+  cursor: url('..assets/cursor/Bread.cur'), auto;
+}
+
 .cursorStuff {
   cursor: url('../images/cursor/knife3.png'), auto;
 }
 
-  .calendar-container {
-    display: flex;
-    align-items: flex-start;
-    margin-top: 20px;
-    padding: 40px;
-    cursor: url('../images/cursor/knife3.png'), auto;
-  }
-  
-/* Apply custom cursor to the entire body */
-body {
-  cursor: url('..assets/cursor/Bread.cur'), auto;
+.toggles {
+  padding: 15px 20px;
+  cursor: url('../images/cursor/knife3.png'), auto;
+}
+
+.toggles:hover {
+ cursor: url('../images/cursor/Bread.png'), auto;
+}
+
+/* Calendar stuff -James */
+.calendar-container {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 20px;
+  padding: 40px;
+  cursor: url('../images/cursor/knife3.png'), auto;
 }
 
 #calendarTitle {
@@ -257,10 +247,121 @@ body {
     background-color: #d35f74;
   }
   
+/* Toggle mode styles -Constance */
+body.tie-dye-dark {
+  background: radial-gradient(circle, #0d0061, #85003a, #02526f);
+  color: #ffffff;
+}
+
+body.tie-dye-dark h1,
+body.tie-dye-dark h2,
+body.tie-dye-dark h3,
+body.tie-dye-dark h4,
+body.tie-dye-dark h5,
+body.tie-dye-dark h6 {
+  color: #ffffff;
+}
+
+body.tie-dye-light {
+  background: radial-gradient(circle, #7a00f5, #4ca1af, #d851c0);
+  color: #fff;
+}
+
+body.tie-dye-dark h1,
+body.tie-dye-dark h2,
+body.tie-dye-dark h3,
+body.tie-dye-dark h4,
+body.tie-dye-dark h5,
+body.tie-dye-dark h6 {
+  color: #ffffff; 
+}
+
+body.mood1-hunter {
+  background: radial-gradient(circle, #ff0000, #ffff00, #1302ff);
+  color: #ffffff;
+}
+
+body.tie-dye-dark h1,
+body.tie-dye-dark h2,
+body.tie-dye-dark h3,
+body.tie-dye-dark h4,
+body.tie-dye-dark h5,
+body.tie-dye-dark h6 {
+  color: #ffffff; 
+}
 
 
+body.mood2-nicholas {
+  background: radial-gradient(circle, #b475eb, #ffffff84, #df8f3f);
+  color: #ffffff;
+}
 
-  /* Calendar Styles */
+body.tie-dye-dark h1,
+body.tie-dye-dark h2,
+body.tie-dye-dark h3,
+body.tie-dye-dark h4,
+body.tie-dye-dark h5,
+body.tie-dye-dark h6 {
+  color: #ffffff; 
+}
+
+
+body.mood3-jameson {
+  background: radial-gradient(circle, #0071fc, #086a0d, #af03ff);
+  color: #ffffff;
+}
+
+body.tie-dye-dark h1,
+body.tie-dye-dark h2,
+body.tie-dye-dark h3,
+body.tie-dye-dark h4,
+body.tie-dye-dark h5,
+body.tie-dye-dark h6 {
+  color: #ffffff; 
+}
+
+
+body.mood4-alexis {
+  background: radial-gradient(circle, #26648e, #53d2dc, #ffe3b3);
+  color: #ffffff;
+}
+
+body.tie-dye-dark h1,
+body.tie-dye-dark h2,
+body.tie-dye-dark h3,
+body.tie-dye-dark h4,
+body.tie-dye-dark h5,
+body.tie-dye-dark h6 {
+  color: #ffffff; 
+}
+
+
+/*recipe library classes.
+first class for titles. - Hunter*/
+.recipeLibraryName{
+  text-align: center;
+  text-transform: capitalize;
+}
+/* unordered list class for recipe library page - Hunter*/
+.recipeLibraryIngredients{
+list-style-type: disc;
+font-size: larger;
+font-weight: 500;
+text-transform: capitalize;
+margin-left: 1%;
+}
+
+/*p tag for recipe steps page. - Hunter*/
+.recipeLibrarySteps{
+  
+  font-size: larger;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-left: 2%;
+}
+
+
+  /* Calendar Styles that Constance made (commented out since we are using James) */
 /* .calendar {
   display: flex;
   flex-direction: column;
@@ -311,6 +412,7 @@ body {
   color: white;
 } */
 
+/* Media Queries - Constance */
 
 /* Small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -343,116 +445,4 @@ body {
       flex-direction: column;
     }
   }
-}
-
-body.tie-dye-dark {
-  background: radial-gradient(circle, #0d0061, #85003a, #02526f);
-  color: #ffffff;
-}
-
-body.tie-dye-dark h1,
-body.tie-dye-dark h2,
-body.tie-dye-dark h3,
-body.tie-dye-dark h4,
-body.tie-dye-dark h5,
-body.tie-dye-dark h6 {
-  color: #ffffff; /* Change this to your desired heading color */
-}
-
-body.tie-dye-light {
-  background: radial-gradient(circle, #7a00f5, #4ca1af, #d851c0);
-  color: #fff;
-}
-
-body.tie-dye-dark h1,
-body.tie-dye-dark h2,
-body.tie-dye-dark h3,
-body.tie-dye-dark h4,
-body.tie-dye-dark h5,
-body.tie-dye-dark h6 {
-  color: #ffffff; /* Change this to your desired heading color */
-}
-
-body.mood1-hunter {
-  background: radial-gradient(circle, #ff0000, #ffff00, #1302ff);
-  color: #ffffff;
-}
-
-body.tie-dye-dark h1,
-body.tie-dye-dark h2,
-body.tie-dye-dark h3,
-body.tie-dye-dark h4,
-body.tie-dye-dark h5,
-body.tie-dye-dark h6 {
-  color: #ffffff; /* Change this to your desired heading color */
-}
-
-
-body.mood2-nicholas {
-  background: radial-gradient(circle, #b475eb, #ffffff84, #df8f3f);
-  color: #ffffff;
-}
-
-body.tie-dye-dark h1,
-body.tie-dye-dark h2,
-body.tie-dye-dark h3,
-body.tie-dye-dark h4,
-body.tie-dye-dark h5,
-body.tie-dye-dark h6 {
-  color: #ffffff; /* Change this to your desired heading color */
-}
-
-
-body.mood3-jameson {
-  background: radial-gradient(circle, #0071fc, #086a0d, #af03ff);
-  color: #ffffff;
-}
-
-body.tie-dye-dark h1,
-body.tie-dye-dark h2,
-body.tie-dye-dark h3,
-body.tie-dye-dark h4,
-body.tie-dye-dark h5,
-body.tie-dye-dark h6 {
-  color: #ffffff; /* Change this to your desired heading color */
-}
-
-
-body.mood4-alexis {
-  background: radial-gradient(circle, #26648e, #53d2dc, #ffe3b3);
-  color: #ffffff;
-}
-
-body.tie-dye-dark h1,
-body.tie-dye-dark h2,
-body.tie-dye-dark h3,
-body.tie-dye-dark h4,
-body.tie-dye-dark h5,
-body.tie-dye-dark h6 {
-  color: #ffffff; /* Change this to your desired heading color */
-}
-
-
-/*recipe library classes.
-first class for titles. - Hunter*/
-.recipeLibraryName{
-  text-align: center;
-  text-transform: capitalize;
-}
-/* unordered list class for recipe library page - Hunter*/
-.recipeLibraryIngredients{
-list-style-type: disc;
-font-size: larger;
-font-weight: 500;
-text-transform: capitalize;
-margin-left: 1%;
-}
-
-/*p tag for recipe steps page. - Hunter*/
-.recipeLibrarySteps{
-  
-  font-size: larger;
-  font-weight: 500;
-  text-transform: capitalize;
-  margin-left: 2%;
 }

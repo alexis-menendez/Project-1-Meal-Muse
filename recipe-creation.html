@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe Creation Page</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"> <!-- Bulma CSS Framework -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"> <!-- Bulma CSS Framework - Alexis -->
+    <link rel="stylesheet" href="assets/css/style.css"> <!-- This is also part of the Bulma CSS Framework in a way - Alexis -->
     <link rel="stylesheet" href="assets/css/override.css">
     <style>
-        .custom-navbar {
+        .custom-navbar { /* This is part of the navbar as well - Alexis */
             background-color: #bb5374; 
             border-bottom: 2px solid black; 
         }
@@ -26,7 +26,7 @@
 
 <body>
     <header>
-        <!-- Navigation Bar -->
+        <!-- Navigation Bar - Alexis -->
     <nav class="navbar custom-navbar">
         <div class="navbar-brand">
             <a class="navbar-item" href="index.html">Meal Muse</a>
@@ -68,21 +68,20 @@
                         </div>
                     </div>
 
-                    <!-- Preparation Steps -->
                     <div class="field">
                         <label class="label">Preparation Steps</label>
                         <div class="control">
-                            <textarea class="textarea" id="steps" placeholder="Enter step-by-step instructions" required></textarea>
+                            <textarea id="steps" placeholder="Enter each step separated by a period (e.g., Preheat oven. Mix ingredients. Bake for 30 minutes.)"></textarea>
                         </div>
                     </div>
 
-                    <!-- Add photo -->
-                    <div class="field">
+                    <!-- Add photo (This is commented out because we are not using it for now - Alexis)
+                        <div class="field">
                         <label class="label">Upload Recipe Photo</label>
                         <div class="control">
                             <input class="input" type="file" id="recipe-photo" accept="image/*">
                         </div>
-                    </div>
+                    </div> --> 
 
                     <!-- Save Button -->
                     <div class="control has-text-centered">
