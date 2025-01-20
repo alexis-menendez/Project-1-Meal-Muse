@@ -72,7 +72,7 @@
   
 /* Apply custom cursor to the entire body -Constance */
 body {
-  cursor: url('..assets/cursor/Bread.cur'), auto;
+  cursor: url('..assets/cursor/knife3.cur'), auto;
 }
 
 .cursorStuff {
@@ -85,7 +85,7 @@ body {
 }
 
 .toggles:hover {
- cursor: url('../images/cursor/Bread.png'), auto;
+ cursor: url('../images/cursor/knife3.png'), auto;
 }
 
 /* Calendar stuff -James */
@@ -465,7 +465,7 @@ margin-left: 1%;
   body {
     background-color: rgb(255, 0, 119);
     .calendar-container {
-      flex-direction: column;
+   
     }
   }
 }
