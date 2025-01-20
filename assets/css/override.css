@@ -358,48 +358,6 @@ body.tie-dye-dark h6 {
   color: #ffffff; 
 }
 
-/*space and tie dye animation theme toggles - Alexis*/
-body.mood5-tiedyeanimation {
-  background: url('assets/images/toggle/animations/tiedyeanimation.crdownload') no-repeat center center fixed;
-  background-size: cover;
-  color: #ffffff;
-}
-
-body.tie-dye-dark {
-  background: url('assets/images/toggle/animations/tiedyeanimation.crdownload') no-repeat center center fixed;
-  background-size: cover;
-}
-
-body.tie-dye-dark h1,
-body.tie-dye-dark h2,
-body.tie-dye-dark h3,
-body.tie-dye-dark h4,
-body.tie-dye-dark h5,
-body.tie-dye-dark h6 {
-  color: #ffffff; 
-}
-
-body.mood6-spaceanimation {
-  background: url('assets/images/toggle/animations/spaceanimation.crdownload') no-repeat center center fixed;
-  background-size: cover;
-  color: #ffffff;
-}
-
-body.tie-dye-dark {
-  background: url('assets/images/toggle/animations/spaceanimation.crdownload') no-repeat center center fixed;
-  background-size: cover;
-}
-
-body.tie-dye-dark h1,
-body.tie-dye-dark h2,
-body.tie-dye-dark h3,
-body.tie-dye-dark h4,
-body.tie-dye-dark h5,
-body.tie-dye-dark h6 {
-  color: #ffffff; 
-}
-
-
 /*recipe library classes.
 first class for titles. - Hunter*/
 .recipeLibraryName{
