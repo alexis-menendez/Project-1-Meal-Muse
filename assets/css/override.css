@@ -32,6 +32,21 @@
     
   }
 
+  .navbar-logo { /* Makes the navbar logo scales proportionally and aligns properly - Alexis */
+    max-height: 100px; 
+    height: 100px;    
+    width: auto;      
+    display: block;  
+    object-fit: contain; /* Avoid stretching */
+    border-radius: 50%; /* Makes the image circular */
+    overflow: hidden;  
+  }
+
+.navbar-item {   /* Increase font size for navbar items - Alexis */
+  font-size: 1.5rem;  /* Adjust font size as needed (e.g., 1.2rem, 2rem, etc.) */
+  font-weight: bold;  /* Optionally make the text bold */
+}
+
   .custom-navbar {
     background-color: #bb5374;
     border-bottom: 2px solid black;
@@ -248,6 +263,14 @@ body {
   }
   
 /* Toggle mode styles -Constance */
+
+.toggles button img { /* Constance, I added this part to your toggle code to make the image circular and adjust thier size */
+  border-radius: 50%; 
+  width: 25px;  
+  height: 25px; 
+  object-fit: cover; 
+}
+
 body.tie-dye-dark {
   background: radial-gradient(circle, #0d0061, #85003a, #02526f);
   color: #ffffff;
