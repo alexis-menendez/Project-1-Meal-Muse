@@ -19,16 +19,18 @@
 
 
 ##  Getting Started
-About
-Meal Muse is a meal planning website to help combat meal planning fatigue. We offer  month to month planning, a recipe inventory and helpful to links to discover more! 
+**About**
+
+Meal Muse is your go-to meal planning companion, designed to ease the stress of meal planning fatigue. With features like month-to-month scheduling, a personalized recipe library, and helpful links to discover new culinary inspiration, Meal Muse makes planning meals effortless and enjoyable.
 
 ### Prerequisites
 
-1. Working internet
-2. Hunger
-3. The ability to tolerate cooking
-4. Willingness to attempt cooking
-5. Actually putting repieces in the libary. 
+1. Hunger
+2. Access to a Device with Internet
+3. Basic Cooking Knowledge (Ability to Follow A Recipe)
+4. Desire to Stay Organized
+5. Willingness to Explore New Recipes
+6. Motivation to Reduce Food Waste
 
 
 ### Installing + Executing
@@ -49,45 +51,60 @@ You access this website through the link provided below.
    
 ## Usage
 
-Meal Muse is an application in order to store your preferred recipies and add them to a calendar for meal planning purposes. 
+Meal Muse is a user-friendly application that allows you to store your favorite recipes and seamlessly add them to a calendar for effortless meal planning.
 
 ### Branches
 
  Main Branch
- * where all branches merge into.
+ * The main branch of the repository serves as the central hub for the project's stable, production-ready code, integrating finalized features and updates from various development branches.
 
  Calendar 2.0 + Calendar
- * Responsible for creating and debugging the calendar.
- * adding meals onto the calendar
+ * Used for designing, developing, and debugging the calendar functionality, ensuring seamless meal scheduling and organization.
 
 Recipe Creation
- * Adding in custom recipies w/ name, ingredients and steps.
+ * Used to create a personalized recipe page where users can add custom recipes by entering the name, ingredients, and step-by-step instructions.
 
 Recipe libray
-* Also known as Inventory, where the recipies will be stored.
+* Used to create the Inventory page, providing a dedicated space for storing and organizing recipes for easy access and management.
 
-Landing
- * Home page
+Landing + Main Page
+ * Used to develop the Home page, offering a welcoming and intuitive interface for easy navigation and access to key features.
 
  Testing
- * debugging the repo as a whole.
+ * Used for debugging the entire repository and thoroughly testing features to ensure functionality, performance, and a seamless user experience.
+
+Cleaning Up + Final Touches
+ * Branches were utilized to apply final refinements and optimize code for clarity and efficiency before submission.
 
 ## Future Development Goals
-* Label meals: Breakfast,  Lunch, Dinner, Desert, Snack, etc. 
-* Create sections for each label
-* Ability to add picture of recipie
-* Generating recipies based on inputted ingredients.
-* Possible expanion into grocery shopping lists and mindfulness applications surrounding food.
-* User generate and submission of cooking videos hosted on MM.
-* About/Contact & FAQ pages for simple trouble shooting.
-* Forum/recipie exchange page.
+* Labeling Feature; Categorize recipes by meal type (e.g., breakfast, lunch, Vegan, Quick Meal).
+* Search and Filtering; Add a search bar for recipes by name or ingredient.
+* Custom Ingredient Units; Allow users to specify units for ingredients (e.g., cups, grams).
+* Favorites & Rating; Include a "Favorite" button for recipes and allow users to rate recipes with stars.
+* Form Autosave; Save form data automatically to local storage.
+* Share Recipe via Link; Add a "Share" button to link recipes to social media.
+* Collaborative Editing; Create shareable links for recipe edits.
+* Print Recipe Option; Add a "Print Recipe" button.
+* Meal Inspiration Button & Ingredient-Based Suggestions; Add a "Get Inspired!" button to suggest random recipes and allow users to input ingredients and suggest recipes based on entered ingredients.
+* Calendar View Toggle; Add toggle options for "Week View" and "Month View."
+* Serving Size Helper & Leftover Indicator; Adjust ingredient amounts based on serving size and calculate if leftovers are likely based on servings.
+* Shopping List Helper; Generate a shopping list from planned meals.
+
 
 ##  Additional Documentation and Acknowledgments
 
-   A huge thanks to:
-   Our TAs and Tutors
-   Copilot + Github
-   All the websites who helped build out code.
+Documentation:
+* Project: https://github.com/users/alexis-menendez/projects/1   
+* Google Doc: https://docs.google.com/document/d/1QtiH2ZgR8AllXiB0O9cGerI2rGmHVrGf1GernTTggUw/edit?usp=sharing
+* Repository: https://github.com/alexis-menendez/Meal-Muse
+* Application: https://alexis-menendez.github.io/Meal-Muse/
+
+Acknowledgments:
+
+A huge thanks to:
+* Our TAs and Tutors
+* Copilot + Github
+* All the websites who helped build out code.
 
 
 ## USER STORY:
