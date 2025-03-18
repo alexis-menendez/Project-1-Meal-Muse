@@ -35,13 +35,13 @@ Meal Muse is your go-to meal planning companion, designed to ease the stress of 
 
 ### Installing + Executing
 
-* just copy and paste the link (https://alexis-menendez.github.io/Meal-Muse/) into the address bar or click on the link in DEPLOYMENT.
+* just copy and paste the link (https://alexis-menendez.github.io/Project-1-Meal-Muse/) into the address bar or click on the link in DEPLOYMENT.
 
 ##  Deployment
 
 You access this website through the link provided below. 
 
-Meal Muse: https://alexis-menendez.github.io/Meal-Muse/
+Meal Muse: https://alexis-menendez.github.io/Project-1-Meal-Muse/
    
 ## Usage
 
