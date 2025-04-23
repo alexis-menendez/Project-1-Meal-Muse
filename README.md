@@ -135,3 +135,15 @@ SO I CAN reduce decision fatigue and easily access my favorite recipes for month
   * GIVEN I access the app from different devices (desktop, tablet, mobile),
   * WHEN I view my recipe inventory or meal planner,
   * THEN the layout adjusts for an optimal user experience.
+
+
+---
+
+## Contact
+
+### [**Alex Menendez**](https://alex-menendez.onrender.com/) – Junior Developer, Junior Project Manager, and Junior UI/UX Designer
+
+- [**Portfolio**](https://alex-menendez.onrender.com/)
+- **LinkedIn**: [in/alex-d-menendez](https://www.linkedin.com/in/alex-d-menendez/)
+- **GitHub**: [alexis-menendez](https://github.com/alexis-menendez)
+- **Email**: [alexis.menendez@austincc.edu](https://alex-menendez.onrender.com/contact)
